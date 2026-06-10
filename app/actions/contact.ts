@@ -27,8 +27,11 @@ export async function sendContactMessage(
   }
 
   const apiKey = process.env.RESEND_API_KEY
-  const to = process.env.CONTACT_TO_EMAIL
-  if (!apiKey || !to) {
+  // 收件邮箱：留言统一发到这个 Gmail（已验证可正常收信）。
+  // 你可在 Gmail 设置里自动转发到 info@wholevantage.com。
+  // 将来域名在 Resend 验证后，可改回 process.env.CONTACT_TO_EMAIL。
+  const to = 'shaodongmoney@gmail.com'
+  if (!apiKey) {
     return { ok: false, error: 'config' }
   }
 
