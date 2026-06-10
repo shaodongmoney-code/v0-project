@@ -1,0 +1,59 @@
+import type { Metadata } from 'next'
+import { CheckCircle2 } from 'lucide-react'
+import { CtaSection } from '@/components/cta-section'
+import { PageHeader } from '@/components/page-header'
+import { getDictionary } from '@/lib/dictionaries'
+
+export const metadata: Metadata = {
+  title: 'My Story with WholeVantage — WholeVantage Advisory',
+}
+
+export default async function MyStoryPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const dict = getDictionary(locale)
+  const s = dict.story
+
+  return (
+    <>
+      <PageHeader title={s.title} subtitle={s.subtitle} />
+
+      <section className="mx-auto max-w-3xl px-6 pb-16">
+        <div className="flex flex-col gap-5">
+          {s.paragraphs.map((p, i) => (
+            <p
+              key={i}
+              className="text-pretty leading-relaxed text-muted-foreground"
+            >
+              {p}
+            </p>
+          ))}
+        </div>
+
+        <div className="mt-12 rounded-2xl border border-border bg-card p-8">
+          <h2 className="text-xl font-bold text-primary">
+            {s.highlightsTitle}
+          </h2>
+          <ul className="mt-6 flex flex-col gap-4">
+            {s.highlights.map((h, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-accent" />
+                <span className="leading-relaxed text-foreground">{h}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <CtaSection
+        locale={locale}
+        dict={dict}
+        title={dict.contact.title}
+        text={dict.contact.subtitle}
+      />
+    </>
+  )
+}
