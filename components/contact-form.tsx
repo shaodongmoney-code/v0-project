@@ -65,7 +65,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
 
         {!state.ok && state.error && (
           <p className="text-sm text-destructive" role="alert">
-            {c.errorText}
+            {state.error === 'config' ? c.configText : c.errorText}
           </p>
         )}
 
