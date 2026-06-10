@@ -35,9 +35,13 @@ export async function sendContactMessage(
 
   try {
     const resend = new Resend(apiKey)
+    // 默认用 Resend 测试发件地址；验证域名后，设置 CONTACT_FROM_EMAIL
+    // 为 "WholeVantage Website <no-reply@wholevantage.com>" 即可，无需改代码。
+    const from =
+      process.env.CONTACT_FROM_EMAIL ||
+      'WholeVantage Website <onboarding@resend.dev>'
     const { error } = await resend.emails.send({
-      // 在 Resend 验证你的域名后，可改成 no-reply@wholevantage.com
-      from: 'WholeVantage Website <onboarding@resend.dev>',
+      from,
       to: [to],
       replyTo: email,
       subject: `[Website Inquiry] ${subject || 'New message'} — from ${name}`,
