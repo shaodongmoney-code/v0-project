@@ -318,6 +318,8 @@ const en = {
       'We have received your message and will get back to you as soon as possible.',
     successClose: 'Close',
     errorText: 'Something went wrong. Please try again or email us directly.',
+    configText:
+      'The contact form is not fully configured yet. Please email us directly for now.',
   },
   blog: {
     title: 'Blog',
