@@ -27,17 +27,12 @@ export async function sendContactMessage(
   }
 
   const apiKey = process.env.RESEND_API_KEY
-  // 临时阶段：域名未在 Resend 验证前，Resend 只允许发到注册邮箱。
-  // 这里强制兜底到注册邮箱，避免环境变量填错导致发送失败。
-  // 域名验证完成后，把下面这行删掉，改回使用 process.env.CONTACT_TO_EMAIL。
-  const to = 'shaodongmoney@gmail.com'
-  if (!apiKey) {
-    console.log('[v0] Missing RESEND_API_KEY env var')
+  const to = process.env.CONTACT_TO_EMAIL
+  if (!apiKey || !to) {
     return { ok: false, error: 'config' }
   }
 
   try {
-    console.log('[v0] Sending to:', JSON.stringify(to))
     const resend = new Resend(apiKey)
     // 默认用 Resend 测试发件地址；验证域名后，设置 CONTACT_FROM_EMAIL
     // 为 "WholeVantage Website <no-reply@wholevantage.com>" 即可，无需改代码。
