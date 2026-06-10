@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import type { Dictionary } from '@/lib/dictionaries'
+import { SubscribeForm } from '@/components/subscribe-form'
 
 export function SiteFooter({
   dict,
@@ -57,7 +58,7 @@ export function SiteFooter({
               {dict.footer.followTitle}
             </h4>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/shephinexu/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -79,20 +80,7 @@ export function SiteFooter({
             <h4 className="text-sm font-bold text-foreground">
               {dict.footer.subscribeTitle}
             </h4>
-            <form className="mt-4 flex flex-col gap-2">
-              <input
-                type="email"
-                required
-                placeholder={dict.footer.emailPlaceholder}
-                className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
-              />
-              <button
-                type="submit"
-                className="w-full rounded-lg bg-primary px-3 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                {dict.footer.subscribe}
-              </button>
-            </form>
+            <SubscribeForm dict={dict} />
           </div>
         </div>
 

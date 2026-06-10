@@ -337,6 +337,7 @@ const en = {
     subscribeTitle: 'Subscribe to HR news',
     emailPlaceholder: 'your email address',
     subscribe: 'Subscribe',
+    subscribeSuccess: 'Thanks for subscribing!',
     rights: '\u00A9 2026 WholeVantage Advisory. All rights reserved.',
     privacy: 'Privacy Policy',
     terms: 'Terms of Service',

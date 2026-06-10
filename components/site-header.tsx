@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ChevronDown, Globe, Menu, X } from 'lucide-react'
@@ -24,6 +24,24 @@ export function SiteHeader({
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState<string | null>(null)
+  const navRef = useRef<HTMLElement>(null)
+
+  // 点击导航区域外部时关闭下拉菜单
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenMenu(null)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  // 切换路由时关闭菜单
+  useEffect(() => {
+    setOpenMenu(null)
+    setMobileOpen(false)
+  }, [pathname])
 
   const base = `/${locale}`
 
@@ -71,21 +89,24 @@ export function SiteHeader({
         </Link>
 
         {/* 桌面导航 */}
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav ref={navRef} className="hidden items-center gap-7 lg:flex">
           {navItems.map((item) =>
             item.children ? (
-              <div
-                key={item.label}
-                className="relative"
-                onMouseEnter={() => setOpenMenu(item.label)}
-                onMouseLeave={() => setOpenMenu(null)}
-              >
+              <div key={item.label} className="relative">
                 <button
+                  onClick={() =>
+                    setOpenMenu((cur) => (cur === item.label ? null : item.label))
+                  }
                   className="flex items-center gap-1 text-sm font-medium text-foreground/80 transition-colors hover:text-accent"
                   aria-expanded={openMenu === item.label}
                 >
                   {item.label}
-                  <ChevronDown className="size-4" />
+                  <ChevronDown
+                    className={cn(
+                      'size-4 transition-transform',
+                      openMenu === item.label && 'rotate-180',
+                    )}
+                  />
                 </button>
                 {openMenu === item.label && (
                   <div className="absolute left-1/2 top-full -translate-x-1/2 pt-3">
@@ -121,18 +142,22 @@ export function SiteHeader({
           )}
 
           {/* 语言切换 */}
-          <div
-            className="relative"
-            onMouseEnter={() => setOpenMenu('lang')}
-            onMouseLeave={() => setOpenMenu(null)}
-          >
+          <div className="relative">
             <button
+              onClick={() =>
+                setOpenMenu((cur) => (cur === 'lang' ? null : 'lang'))
+              }
               className="flex items-center gap-1.5 text-sm font-medium text-foreground/80 transition-colors hover:text-accent"
               aria-expanded={openMenu === 'lang'}
             >
               <Globe className="size-4" />
               {dict.nav.languages}
-              <ChevronDown className="size-4" />
+              <ChevronDown
+                className={cn(
+                  'size-4 transition-transform',
+                  openMenu === 'lang' && 'rotate-180',
+                )}
+              />
             </button>
             {openMenu === 'lang' && (
               <div className="absolute right-0 top-full pt-3">
