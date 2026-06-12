@@ -92,12 +92,12 @@ const en = {
       {
         title: 'U.S. HR Infrastructure Setup',
         intro:
-          'Establish a solid management foundation for companies entering the U.S. market or in early stages.',
+          'Build the foundational policies, documents, processes, and HR operating framework needed for U.S. employment operations, creating a stronger foundation for future growth.',
         points: [
-          'Employee handbook and core policies establishment',
-          'Offer letters, NDAs, job descriptions, and other document support',
-          'Onboarding, probation, transfer, and offboarding process setup',
-          'Employee files and common HR forms creation',
+          'Employee handbook and core policy development',
+          'Support with foundational documents, including offer letters, confidentiality agreements, and job descriptions',
+          'Review and structuring of onboarding, introductory-period review, role changes, and separation/offboarding processes',
+          'Employee record setup and commonly used HR forms',
         ],
       },
       {
