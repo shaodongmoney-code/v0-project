@@ -191,14 +191,14 @@ const en = {
         ],
       },
       {
-        title: 'Ongoing HR Advisory Support',
+        title: 'Ongoing HR Advisory & Strategic Support',
         intro:
-          'Serve as a long-term strategic partner for the company, providing flexible and in-depth professional management support.',
+          'Provide ongoing, on-demand, or retainer-based advisory support post-implementation to accompany companies through every stage of steady growth.',
         points: [
-          'On-demand senior management advisory consulting',
-          'Participation in management meetings to provide organizational perspectives',
-          'Response and resolution of sudden internal crisis events',
-          'Follow-up and implementation of phased organizational change projects',
+          'Long-Term HR Strategic Planning & Periodic Alignment: Closely aligning with different business growth stages to provide strategic recommendations on organizational design, HR strategy, organizational development (OD) and key management priorities for each phase.',
+          'Monthly Retainer or On-Demand HR Advisory Services: Offering flexible support structures tailored to your company\u2019s operational rhythm and immediate needs.',
+          'Day-to-Day Q&A Support: Reliable counsel covering ongoing recruitment, compliance, employee relations, and management challenges.',
+          'Post-Implementation Maintenance: Ongoing follow-up support to ensure previously implemented projects transition smoothly into daily operations.',
         ],
       },
     ],
