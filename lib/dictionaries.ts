@@ -125,12 +125,14 @@ const en = {
       {
         title: 'Employee Relations and Management Support',
         intro:
-          'Properly handle complex employee relations issues to maintain a healthy and efficient organizational atmosphere.',
+          'Support companies in managing daily employee relations, workplace communication, performance concerns, investigations, and sensitive employment matters in a practical and compliant manner.',
         points: [
-          'Daily employee relations consulting and handling advice',
-          'Performance improvement plan (PIP) coaching for underperforming employees',
-          'Disciplinary action and termination process compliance support',
-          'Exit interviews and potential dispute risk assessment',
+          'Employee complaints, conflicts, and sensitive workplace issue handling support',
+          'Workplace investigation process support, including fact-finding, documentation, and follow-up action recommendations',
+          'Manager communication, coaching, and performance improvement support',
+          'Disciplinary action, separation, and grievance-related process support',
+          'Workplace injury, workers\u2019 compensation coordination, and return-to-work communication support',
+          'Daily management recommendations to reduce potential employment dispute risks',
         ],
       },
       {
