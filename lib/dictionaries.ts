@@ -16,7 +16,7 @@ const en = {
     blog: 'Blog',
     languages: 'Languages',
     aboutItems: {
-      story: 'My Story with WholeVantage',
+      story: 'My Story',
       approach: 'Our Approach',
     },
     servicesItems: {
@@ -40,21 +40,21 @@ const en = {
   story: {
     title: 'About WholeVantage Advisory',
     subtitle:
-      'Explore the purpose, background, and values behind WholeVantage Advisory.',
+      'Explore the purpose, background, and values behind WholeVantage Advisory',
     paragraphs: [
-      'WholeVantage Advisory was established to support companies entering or already operating in the U.S. market, providing practical and reliable HR consulting services.',
-      'Through WholeVantage, we aim to combine professional HR judgment, deep understanding of human nature, and support for real business scenarios to provide clients with clear, stable, and actionable solutions.',
-      "We bring over twenty years of HR and organizational management leadership experience, deeply integrated with hands-on sales management and psychological counseling practice. Our principal, a Master's graduate in Psychology from Peking University, holds three prestigious U.S. advanced HR professional certifications and possesses a multidisciplinary perspective across cultures and geographies.",
-      'In our approach, we combine deep understanding of management structures and employment compliance with business reality and organizational insights. We are committed to helping enterprises build solid management foundations, implement effective operational practices, and establish robust organizational support systems to maintain competitiveness in complex business environments.',
+      'WholeVantage Advisory was established to support companies that are preparing to enter the U.S. market or are already operating in the United States, by providing practical and reliable HR consulting services.',
+      'Through WholeVantage, I aim to bring together professional HR judgment, a psychology-informed understanding of human behavior and workplace dynamics, and practical support for real business situations. My goal is to provide clients with clear, sound, and actionable guidance.',
+      'I bring over twenty years of leadership experience in human resources and organizational management, integrated with hands-on sales management experience and psychological counseling practice. With a Master\u2019s degree in Psychology and three senior U.S. HR professional certifications, I bring a multidisciplinary perspective across cultures, geographies, and business functions.',
+      'In my approach, I combine a deep understanding of management structures and employment compliance with business reality and organizational insight. I am committed to helping companies build solid management foundations, implement effective operational practices, and establish strong organizational support systems, so they can remain competitive in a complex business environment.',
     ],
     highlightsTitle: 'Professional Highlights',
     highlights: [
-      'HR leadership experience with Fortune 500 companies (Nielsen, BP, Nike, and others)',
-      'Hands-on sales and team management experience (Lexus retail system)',
-      'Psychological counseling and communication practice (major psychological consulting firm in Southern California)',
-      "Master's degree in Psychology from Peking University",
-      'Holds three prestigious U.S. advanced HR and global HR professional certifications',
-      'Professional expertise spans organizational development, cross-border management, and compliance practices',
+      'HR leadership experience with Fortune 500 companies, including ACNielsen, BP and Nike',
+      'Hands-on sales management experience within the Lexus retail system',
+      'Counseling-related practice experience with a large counseling organization in Southern California',
+      'Master\u2019s degree in Psychology from Peking University',
+      'U.S. HR professional certifications: SPHR, GPHR, and SHRM-CP',
+      'Expertise covering senior HR management, global HR management, and professional HR practice capabilities',
     ],
   },
   approach: {
