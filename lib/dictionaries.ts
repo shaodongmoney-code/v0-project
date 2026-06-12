@@ -92,12 +92,12 @@ const en = {
       {
         title: 'U.S. HR Infrastructure Setup',
         intro:
-          'Establish a solid management foundation for companies entering the U.S. market or in early stages.',
+          'Build the foundational policies, documents, processes, and HR operating framework needed for U.S. employment operations, creating a stronger foundation for future growth.',
         points: [
-          'Employee handbook and core policies establishment',
-          'Offer letters, NDAs, job descriptions, and other document support',
-          'Onboarding, probation, transfer, and offboarding process setup',
-          'Employee files and common HR forms creation',
+          'Employee handbook and core policy development',
+          'Support with foundational documents, including offer letters, confidentiality agreements, and job descriptions',
+          'Review and structuring of onboarding, introductory-period review, role changes, and separation/offboarding processes',
+          'Employee record setup and commonly used HR forms',
         ],
       },
       {
@@ -114,12 +114,12 @@ const en = {
       {
         title: 'Recruitment and Hiring Support',
         intro:
-          'Assist companies in attracting, evaluating, and bringing in talent that aligns with business needs and cultural fit.',
+          'We support companies in clarifying hiring needs and improving the connection between recruitment, offer communication, and onboarding.',
         points: [
-          'Recruitment channel recommendations and employer branding',
-          'Key position interview support and candidate evaluation',
-          'Background check process and compliance guidance',
-          'Market compensation data reference and salary recommendations',
+          'Hiring Needs Analysis, Headcount Budgeting & Workforce Planning: Supporting organizations in structuring headcounts, planning talent budgets, and designing strategic workforce alignment.',
+          'Job Description Optimization & Recruitment Channel Strategy: Refining core responsibilities for target roles and providing tailored recommendations on high-impact recruitment channels.',
+          'Interview Process Design & Offer Communication Support: Standardizing the selection process and providing expert guidance on candidate engagement, salary negotiations, and offer deliveries.',
+          'Onboarding Coordination & Probation-Period Management: Structuring the onboarding journey and providing comprehensive alignment frameworks for probation-period assessments and talent retention.',
         ],
       },
       {
@@ -191,14 +191,14 @@ const en = {
         ],
       },
       {
-        title: 'Ongoing HR Advisory Support',
+        title: 'Ongoing HR Advisory & Strategic Support',
         intro:
-          'Serve as a long-term strategic partner for the company, providing flexible and in-depth professional management support.',
+          'Provide ongoing, on-demand, or retainer-based advisory support post-implementation to accompany companies through every stage of steady growth.',
         points: [
-          'On-demand senior management advisory consulting',
-          'Participation in management meetings to provide organizational perspectives',
-          'Response and resolution of sudden internal crisis events',
-          'Follow-up and implementation of phased organizational change projects',
+          'Long-Term HR Strategic Planning & Periodic Alignment: Closely aligning with different business growth stages to provide strategic recommendations on organizational design, HR strategy, organizational development (OD) and key management priorities for each phase.',
+          'Monthly Retainer or On-Demand HR Advisory Services: Offering flexible support structures tailored to your company\u2019s operational rhythm and immediate needs.',
+          'Day-to-Day Q&A Support: Reliable counsel covering ongoing recruitment, compliance, employee relations, and management challenges.',
+          'Post-Implementation Maintenance: Ongoing follow-up support to ensure previously implemented projects transition smoothly into daily operations.',
         ],
       },
     ],
