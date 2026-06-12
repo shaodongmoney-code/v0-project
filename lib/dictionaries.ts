@@ -103,13 +103,12 @@ const en = {
       {
         title: 'Employment Compliance and Risk Prevention Support',
         intro:
-          'Reduce employment risks and ensure compliant operations in the complex U.S. labor law environment.',
+          'Help companies identify and reduce employment compliance risks, while making management practices more structured and operational decisions more sound.',
         points: [
-          'I-9, FLSA, and basic compliance reviews',
-          'Federal and state labor law compliance self-checks and recommendations',
-          'Full-time vs. independent contractor, exempt vs. non-exempt classification guidance',
-          'Working hours and compensation compliance recommendations',
-          'Anti-harassment, anti-discrimination policies, and training support',
+          'I-9, FLSA, and basic federal and state employment compliance self-checks and recommendations',
+          'Employee vs. independent contractor, exempt vs. non-exempt classification, working hours, overtime, and compensation compliance guidance',
+          'Disciplinary action, workplace investigation, and separation process recommendations',
+          'Anti-harassment, anti-discrimination policy, and basic management training support',
         ],
       },
       {
