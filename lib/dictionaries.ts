@@ -114,12 +114,12 @@ const en = {
       {
         title: 'Recruitment and Hiring Support',
         intro:
-          'Assist companies in attracting, evaluating, and bringing in talent that aligns with business needs and cultural fit.',
+          'We support companies in clarifying hiring needs and improving the connection between recruitment, offer communication, and onboarding.',
         points: [
-          'Recruitment channel recommendations and employer branding',
-          'Key position interview support and candidate evaluation',
-          'Background check process and compliance guidance',
-          'Market compensation data reference and salary recommendations',
+          'Hiring Needs Analysis, Headcount Budgeting & Workforce Planning: Supporting organizations in structuring headcounts, planning talent budgets, and designing strategic workforce alignment.',
+          'Job Description Optimization & Recruitment Channel Strategy: Refining core responsibilities for target roles and providing tailored recommendations on high-impact recruitment channels.',
+          'Interview Process Design & Offer Communication Support: Standardizing the selection process and providing expert guidance on candidate engagement, salary negotiations, and offer deliveries.',
+          'Onboarding Coordination & Probation-Period Management: Structuring the onboarding journey and providing comprehensive alignment frameworks for probation-period assessments and talent retention.',
         ],
       },
       {
