@@ -31,9 +31,9 @@ const en = {
       'Reliable, practical Human Resources advisory support for businesses. Empowering organizations to navigate talent, management, and compliance challenges with stability.',
     bookConsultation: 'Book Consultation',
     exploreServices: 'Explore Services',
-    introTitle: 'Professional HR Consulting Services',
+    introTitle: 'We serve business founders and management teams',
     introText:
-      'We are committed to providing high-quality business consulting and human resources solutions to help companies grow and operate more effectively.',
+      'Whether you are building your U.S. HR infrastructure from scratch, resolving a critical workplace issue, or looking for ongoing advisory support, we deliver clear, actionable, and localized guidance.',
     wechatTitle: 'WholeVantage Advisory',
     wechatText: 'SCAN TO ADD FRIEND',
   },
@@ -301,7 +301,7 @@ const en = {
     phoneLabel: 'Phone',
     phone: '+1-407-488-3915',
     officeLabel: 'Office Address',
-    office: 'Orlando City Florida USA',
+    office: 'Orlando,Florida,USA',
     formTitle: 'Send Us a Message',
     formSubtitle:
       'Fill out the form below and we will get back to you as soon as possible.',
