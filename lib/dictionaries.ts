@@ -16,7 +16,7 @@ const en = {
     blog: 'Blog',
     languages: 'Languages',
     aboutItems: {
-      story: 'My Story with WholeVantage',
+      story: 'My Story',
       approach: 'Our Approach',
     },
     servicesItems: {
@@ -31,30 +31,30 @@ const en = {
       'Reliable, practical Human Resources advisory support for businesses. Empowering organizations to navigate talent, management, and compliance challenges with stability.',
     bookConsultation: 'Book Consultation',
     exploreServices: 'Explore Services',
-    introTitle: 'Professional HR Consulting Services',
+    introTitle: 'We serve business founders and management teams',
     introText:
-      'We are committed to providing high-quality business consulting and human resources solutions to help companies grow and operate more effectively.',
+      'Whether you are building your U.S. HR infrastructure from scratch, resolving a critical workplace issue, or looking for ongoing advisory support, we deliver clear, actionable, and localized guidance.',
     wechatTitle: 'WholeVantage Advisory',
     wechatText: 'SCAN TO ADD FRIEND',
   },
   story: {
     title: 'About WholeVantage Advisory',
     subtitle:
-      'Explore the purpose, background, and values behind WholeVantage Advisory.',
+      'Explore the purpose, background, and values behind WholeVantage Advisory',
     paragraphs: [
-      'WholeVantage Advisory was established to support companies entering or already operating in the U.S. market, providing practical and reliable HR consulting services.',
-      'Through WholeVantage, we aim to combine professional HR judgment, deep understanding of human nature, and support for real business scenarios to provide clients with clear, stable, and actionable solutions.',
-      "We bring over twenty years of HR and organizational management leadership experience, deeply integrated with hands-on sales management and psychological counseling practice. Our principal, a Master's graduate in Psychology from Peking University, holds three prestigious U.S. advanced HR professional certifications and possesses a multidisciplinary perspective across cultures and geographies.",
-      'In our approach, we combine deep understanding of management structures and employment compliance with business reality and organizational insights. We are committed to helping enterprises build solid management foundations, implement effective operational practices, and establish robust organizational support systems to maintain competitiveness in complex business environments.',
+      'WholeVantage Advisory was established to support companies that are preparing to enter the U.S. market or are already operating in the United States, by providing practical and reliable HR consulting services.',
+      'Through WholeVantage, I aim to bring together professional HR judgment, a psychology-informed understanding of human behavior and workplace dynamics, and practical support for real business situations. My goal is to provide clients with clear, sound, and actionable guidance.',
+      'I bring over twenty years of leadership experience in human resources and organizational management, integrated with hands-on sales management experience and psychological counseling practice. With a Master\u2019s degree in Psychology and three senior U.S. HR professional certifications, I bring a multidisciplinary perspective across cultures, geographies, and business functions.',
+      'In my approach, I combine a deep understanding of management structures and employment compliance with business reality and organizational insight. I am committed to helping companies build solid management foundations, implement effective operational practices, and establish strong organizational support systems, so they can remain competitive in a complex business environment.',
     ],
     highlightsTitle: 'Professional Highlights',
     highlights: [
-      'HR leadership experience with Fortune 500 companies (Nielsen, BP, Nike, and others)',
-      'Hands-on sales and team management experience (Lexus retail system)',
-      'Psychological counseling and communication practice (major psychological consulting firm in Southern California)',
-      "Master's degree in Psychology from Peking University",
-      'Holds three prestigious U.S. advanced HR and global HR professional certifications',
-      'Professional expertise spans organizational development, cross-border management, and compliance practices',
+      'HR leadership experience with Fortune 500 companies, including ACNielsen, BP and Nike',
+      'Hands-on sales management experience within the Lexus retail system',
+      'Counseling-related practice experience with a large counseling organization in Southern California',
+      'Master\u2019s degree in Psychology from Peking University',
+      'U.S. HR professional certifications: SPHR, GPHR, and SHRM-CP',
+      'Expertise covering senior HR management, global HR management, and professional HR practice capabilities',
     ],
   },
   approach: {
@@ -103,13 +103,12 @@ const en = {
       {
         title: 'Employment Compliance and Risk Prevention Support',
         intro:
-          'Reduce employment risks and ensure compliant operations in the complex U.S. labor law environment.',
+          'Help companies identify and reduce employment compliance risks, while making management practices more structured and operational decisions more sound.',
         points: [
-          'I-9, FLSA, and basic compliance reviews',
-          'Federal and state labor law compliance self-checks and recommendations',
-          'Full-time vs. independent contractor, exempt vs. non-exempt classification guidance',
-          'Working hours and compensation compliance recommendations',
-          'Anti-harassment, anti-discrimination policies, and training support',
+          'I-9, FLSA, and basic federal and state employment compliance self-checks and recommendations',
+          'Employee vs. independent contractor, exempt vs. non-exempt classification, working hours, overtime, and compensation compliance guidance',
+          'Disciplinary action, workplace investigation, and separation process recommendations',
+          'Anti-harassment, anti-discrimination policy, and basic management training support',
         ],
       },
       {
@@ -301,7 +300,7 @@ const en = {
     phoneLabel: 'Phone',
     phone: '+1-407-488-3915',
     officeLabel: 'Office Address',
-    office: 'Orlando City Florida USA',
+    office: 'Orlando,Florida,USA',
     formTitle: 'Send Us a Message',
     formSubtitle:
       'Fill out the form below and we will get back to you as soon as possible.',

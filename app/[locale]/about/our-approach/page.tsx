@@ -26,7 +26,7 @@ export default async function OurApproachPage({
               key={i}
               className="flex flex-col rounded-2xl border border-border bg-card p-8"
             >
-              <span className="text-sm font-medium uppercase tracking-wide text-accent">
+              <span className="text-sm font-medium uppercase tracking-wide text-primary">
                 {p.tag}
               </span>
               <h2 className="mt-3 text-2xl font-bold text-primary">

@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/page-header'
 import { getDictionary } from '@/lib/dictionaries'
 
 export const metadata: Metadata = {
-  title: 'My Story with WholeVantage — WholeVantage Advisory',
+  title: 'My Story — WholeVantage Advisory',
 }
 
 export default async function MyStoryPage({
