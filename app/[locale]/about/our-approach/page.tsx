@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { PageHeader } from '@/components/page-header'
 import { getDictionary } from '@/lib/dictionaries'
 
@@ -37,6 +38,16 @@ export default async function OurApproachPage({
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 overflow-hidden rounded-2xl border border-border">
+          <Image
+            src="/images/our-approach.webp"
+            alt="A sunlit workspace with an open notebook, pen, and a cup of coffee"
+            width={1456}
+            height={600}
+            className="h-auto w-full object-cover"
+          />
         </div>
       </section>
     </>
