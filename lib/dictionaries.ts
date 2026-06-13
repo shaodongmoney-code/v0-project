@@ -28,7 +28,7 @@ const en = {
   home: {
     heroTitle: 'Deeper understanding. Broader perspective.',
     heroText:
-      'Reliable, practical Human Resources advisory support for businesses. Empowering organizations to navigate talent, management, and compliance challenges with stability.',
+      'Practical HR advisory for growing businesses. We help you navigate talent, management and compliance \u2014 with clarity and stability.',
     bookConsultation: 'Book Consultation',
     exploreServices: 'Explore Services',
     introTitle: 'We serve business founders and management teams',
