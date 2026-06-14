@@ -116,10 +116,10 @@ const en = {
         intro:
           'We support companies in clarifying hiring needs and improving the connection between recruitment, offer communication, and onboarding.',
         points: [
-          'Hiring Needs Analysis, Headcount Budgeting & Workforce Planning: Supporting organizations in structuring headcounts, planning talent budgets, and designing strategic workforce alignment.',
-          'Job Description Optimization & Recruitment Channel Strategy: Refining core responsibilities for target roles and providing tailored recommendations on high-impact recruitment channels.',
-          'Interview Process Design & Offer Communication Support: Standardizing the selection process and providing expert guidance on candidate engagement, salary negotiations, and offer deliveries.',
-          'Onboarding Coordination & Probation-Period Management: Structuring the onboarding journey and providing comprehensive alignment frameworks for probation-period assessments and talent retention.',
+          'Hiring Needs Analysis, Headcount Budgeting & Workforce Planning',
+          'Job Description Optimization & Recruitment Channel Strategy',
+          'Interview Process Design & Offer Communication Support',
+          'Onboarding Coordination & Probation-Period Management',
         ],
       },
       {
@@ -136,36 +136,38 @@ const en = {
         ],
       },
       {
-        title: 'Performance, Compensation, and Talent Management Support',
+        title: 'Total Rewards: Compensation & Benefits Support',
         intro:
-          'Establish scientific evaluation and incentive mechanisms to unlock employee potential and retain core talent.',
+          'Establish competitive incentive and benefit mechanisms to attract, motivate, and retain core talent.',
+        points: [
+          'Compensation Structures, Job Grading, Salary Bands & Market Data Analysis',
+          'Compensation Management for Hiring, Promotions & Internal Transfers',
+          'Bonus and Comprehensive Incentive Plan Design',
+          'Comprehensive Benefits, 401(k) Plans, PTO & Flexible Welfare Planning',
+        ],
+      },
+      {
+        title: 'Performance Management & Management Capability Development Support',
+        intro:
+          'Enhance leadership, align evaluation systems, and improve team collaboration to empower organizational development.',
         points: [
           'Performance evaluation system design and implementation coaching',
-          'Compensation structure design and annual salary adjustment recommendations',
-          'Bonus and comprehensive incentive plan design',
-          'Core talent identification and long-term retention strategies',
+          'Leadership & Core Management Skills Training',
+          'Cross-Cultural Communication & Global Team Collaboration',
+          'Customized Internal Management Workshop Design and Facilitation',
         ],
       },
       {
-        title: 'Training and Management Capability Development Support',
+        title: 'Talent Development and Succession Pipeline Support',
         intro:
-          'Enhance leadership and team collaboration skills for managers at all levels to empower organizational development.',
+          'Support companies in identifying, developing, and retaining key talent while building a sustainable talent pipeline for future growth.',
         points: [
-          'New employee onboarding training system setup',
-          'Frontline manager skills training (interviewing, performance feedback, etc.)',
-          'Cross-cultural communication and efficient collaboration training',
-          'Customized internal management workshop design and facilitation',
-        ],
-      },
-      {
-        title: 'People Development and Talent Pipeline Support',
-        intro:
-          "Plan employee growth paths to build a reserve of key core strength for the company's long-term development.",
-        points: [
-          'Employee career development path system design',
-          'Initial setup of succession planning for key positions',
-          'Internal mentorship program design and implementation coaching',
-          'Core employee individual development plan (IDP) guidance',
+          'Key talent identification and development recommendations',
+          'Employee career development path design',
+          'Individual development plan (IDP) guidance for key employees',
+          'Job rotation, cross-functional exposure, and development opportunity recommendations',
+          'Initial succession planning for key positions',
+          'Internal mentorship or coaching program design and implementation support',
         ],
       },
       {
@@ -173,10 +175,10 @@ const en = {
         intro:
           'Shape a positive organizational atmosphere to enhance employee belonging and engagement.',
         points: [
-          'Core corporate values refinement and implementation',
-          'Employee satisfaction surveys and improvement plan development',
-          'Internal communication mechanism establishment and optimization',
-          'Employee recognition and diverse reward program design',
+          'Core Corporate Values Refinement and Implementation',
+          'Employee Satisfaction Surveys and Improvement Plan Development',
+          'Internal Communication & Speak Up Mechanism Establishment',
+          'Employee Spot Recognition & Long-Term Appreciation Program Design',
         ],
       },
       {
@@ -193,11 +195,10 @@ const en = {
       {
         title: 'Ongoing HR Advisory & Strategic Support',
         intro:
-          'Provide ongoing, on-demand, or retainer-based advisory support post-implementation to accompany companies through every stage of steady growth.',
+          'Closely align with different business growth stages to provide strategic recommendations on HR strategy, organizational development (OD) and key management priorities for each phase.',
         points: [
-          'Long-Term HR Strategic Planning & Periodic Alignment: Closely aligning with different business growth stages to provide strategic recommendations on organizational design, HR strategy, organizational development (OD) and key management priorities for each phase.',
           'Monthly Retainer or On-Demand HR Advisory Services: Offering flexible support structures tailored to your company\u2019s operational rhythm and immediate needs.',
-          'Day-to-Day Q&A Support: Reliable counsel covering ongoing recruitment, compliance, employee relations, and management challenges.',
+          'Day-to-Day Q&A Support: Reliable counsel covering ongoing HR and management challenges, includes but not limited to recruitment, compliance, employee relations.',
           'Post-Implementation Maintenance: Ongoing follow-up support to ensure previously implemented projects transition smoothly into daily operations.',
         ],
       },
@@ -297,6 +298,9 @@ const en = {
     title: 'Contact Us',
     subtitle:
       'Have any questions, collaboration ideas, or just want to say hello? Feel free to reach out to us.',
+    pageTitle: 'Contact Shephine',
+    pageSubtitle:
+      'Have any questions, collaboration ideas, or just want to say hello? Feel free to reach out to Shephine.',
     emailLabel: 'Email',
     email: 'info@wholevantage.com',
     phoneLabel: 'Phone',

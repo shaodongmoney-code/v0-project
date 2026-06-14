@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { CheckCircle2 } from 'lucide-react'
 import { CtaSection } from '@/components/cta-section'
 import { PageHeader } from '@/components/page-header'
@@ -21,16 +22,29 @@ export default async function MyStoryPage({
     <>
       <PageHeader title={s.title} subtitle={s.subtitle} />
 
-      <section className="mx-auto max-w-3xl px-6 pb-16">
-        <div className="flex flex-col gap-5">
-          {s.paragraphs.map((p, i) => (
-            <p
-              key={i}
-              className="text-pretty leading-relaxed text-muted-foreground"
-            >
-              {p}
-            </p>
-          ))}
+      <section className="mx-auto max-w-5xl px-6 pb-16">
+        <div className="grid items-start gap-8 lg:grid-cols-[1.6fr_1fr]">
+          <div className="flex flex-col gap-5">
+            {s.paragraphs.map((p, i) => (
+              <p
+                key={i}
+                className="text-pretty leading-relaxed text-muted-foreground"
+              >
+                {p}
+              </p>
+            ))}
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-3">
+            <Image
+              src="/images/shephine-portrait.jpeg"
+              alt="Portrait of Shephine, founder of WholeVantage Advisory"
+              width={840}
+              height={1120}
+              priority
+              className="h-auto w-full rounded-xl object-cover [aspect-ratio:3/4]"
+            />
+          </div>
         </div>
 
         <div className="mt-12 rounded-2xl border border-border bg-card p-8">
