@@ -349,9 +349,12 @@ const en = {
   },
 } as const
 
+// zh 暂用英文占位（English placeholders），后续再补真实翻译，不做任何机器翻译
+const zh = en
+
 export const dictionaries = {
   en,
-  // zh: { ... }  // 预留：补全中文翻译后在此添加
+  zh,
   // es: { ... }  // 预留：补全西班牙文翻译后在此添加
 }
 
