@@ -84,7 +84,7 @@ export function SiteFooter({
           </div>
         </div>
 
-        <p className="mt-2 text-center text-sm text-gray-500">
+        <p className="mt-2 text-center text-sm text-muted-foreground">
           {dict.footer.languageNote}
         </p>
 
