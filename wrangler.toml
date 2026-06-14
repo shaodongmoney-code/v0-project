@@ -2,8 +2,3 @@ name = "wholevantage-advisory"
 compatibility_date = "2026-06-13"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".open-next/assets"
-
-name = "wholevantage-advisory"
-compatibility_date = "2026-06-13"
-compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = ".open-next/assets"
