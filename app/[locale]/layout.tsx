@@ -8,6 +8,20 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  return {
+    other: {
+      google: 'notranslate',
+      'Content-Language': locale,
+    },
+  }
+}
+
 export default async function LocaleLayout({
   children,
   params,
