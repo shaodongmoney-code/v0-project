@@ -84,6 +84,10 @@ export function SiteFooter({
           </div>
         </div>
 
+        <p className="mt-2 text-center text-sm text-gray-500">
+          {dict.footer.languageNote}
+        </p>
+
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row">
           <p>{dict.footer.rights}</p>
           <div className="flex gap-6">
