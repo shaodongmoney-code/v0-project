@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/page-header'
 import { getDictionary } from '@/lib/dictionaries'
 
 export const metadata: Metadata = {
-  title: 'Contact Us — WholeVantage Advisory',
+  title: 'Contact Shephine — WholeVantage Advisory',
 }
 
 export default async function ContactPage({
@@ -25,7 +25,7 @@ export default async function ContactPage({
 
   return (
     <>
-      <PageHeader title={c.title} subtitle={c.subtitle} />
+      <PageHeader title={c.pageTitle} subtitle={c.pageSubtitle} />
 
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
