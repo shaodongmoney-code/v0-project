@@ -5,7 +5,7 @@
 // ============================================================================
 
 // 已上线启用的语言
-export const locales = ['en'] as const
+export const locales = ['en', 'zh'] as const
 
 // 全部计划支持的语言（用于语言切换菜单展示）
 export const allLocales = ['en', 'zh', 'es'] as const
