@@ -343,6 +343,8 @@ const en = {
     emailPlaceholder: 'your email address',
     subscribe: 'Subscribe',
     subscribeSuccess: 'Thanks for subscribing!',
+    languageNote:
+      'Website available in English and 简体中文. Use the language switcher at the top.',
     rights: '\u00A9 2026 WholeVantage Advisory. All rights reserved.',
     privacy: 'Privacy Policy',
     terms: 'Terms of Service',
@@ -419,7 +421,7 @@ const zh = {
       {
         tag: '行动与推动',
         title: '行动力',
-        text: '我们注重执行与落地，而不仅是纸面建议。凭借强大的行动导向，我们帮助推动变革，支持企业将管理策略转化为可见且实际的业务成果。',
+        text: '我们注重执行与落地，而不仅是纸面建议。凭借强大的行动导向���我们帮助推动变革，支持企业将管理策略转化为可见且实际的业务成果。',
       },
     ],
   },
@@ -581,7 +583,7 @@ const zh = {
         exampleLabel: '业务示例',
         example: '搭建基础管理制度（如员工手册）、建立和优化招聘体系、设计年度绩效评估机制等。',
         billingLabel: '计费参考',
-        billing: '项目定价基于范围、交付成果及预期合作周期；需要时可提供分期付款。',
+        billing: '项目定价基于范��、交付成果及预期合作周期；需要时可提供分期付款。',
       },
       {
         title: '持续管理顾问',
@@ -647,6 +649,7 @@ const zh = {
     emailPlaceholder: '您的邮箱地址',
     subscribe: '订阅',
     subscribeSuccess: '感谢订阅！',
+    languageNote: '本网站提供 English 和 简体中文 版本，请使用顶部语言切换器。',
     rights: '© 2026 WholeVantage Advisory. 保留所有权利。',
     privacy: '隐私政策',
     terms: '服务条款',

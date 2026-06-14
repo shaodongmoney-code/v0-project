@@ -12,6 +12,8 @@ export default async function HomePage({
   const { locale } = await params
   const dict = getDictionary(locale)
   const base = `/${locale}`
+  const qrSrc =
+    locale === 'zh' ? '/images/wechat-qr-zh.png' : '/images/wechat-qr-en.png'
 
   return (
     <>
@@ -100,7 +102,7 @@ export default async function HomePage({
             {dict.home.wechatTitle}
           </h3>
           <Image
-            src="/images/wechat-qr.png"
+            src={qrSrc}
             alt="WeChat QR code to add WholeVantage Advisory as a contact"
             width={180}
             height={180}
