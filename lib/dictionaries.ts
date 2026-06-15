@@ -28,7 +28,7 @@ const en = {
   home: {
     heroTitle: 'Deeper understanding. Broader perspective.',
     heroText:
-      'Practical HR advisory for growing businesses. We help you navigate talent, management and compliance \u2014 with clarity and stability.',
+      'Practical and reliable HR advisory support for companies entering or operating in the U.S. market, helping organizations navigate talent, management, and compliance challenges with greater clarity and stability.',
     bookConsultation: 'Book Consultation',
     exploreServices: 'Explore Services',
     introTitle: 'We serve business founders and management teams',
@@ -49,7 +49,7 @@ const en = {
     ],
     highlightsTitle: 'Professional Highlights',
     highlights: [
-      'HR leadership experience with Fortune 500 companies, including ACNielsen, BP and Nike',
+      '20+ years of HR and organizational management leadership experience, including senior HR leadership roles with Fortune Global 500 and leading multinational companies such as BP and Nike.',
       'Hands-on sales management experience within the Lexus retail system',
       'Counseling-related practice experience with a large counseling organization in Southern California',
       'Master\u2019s degree in Psychology from Peking University',
@@ -298,7 +298,7 @@ const en = {
     title: 'Contact Us',
     subtitle:
       'Have any questions, collaboration ideas, or just want to say hello? Feel free to reach out to us.',
-    pageTitle: 'Contact Shephine',
+    pageTitle: 'Contact Us',
     pageSubtitle:
       'Have any questions, collaboration ideas, or just want to say hello? Feel free to reach out to Shephine.',
     emailLabel: 'Email',
@@ -372,7 +372,7 @@ const zh = {
   },
   home: {
     heroTitle: '更深的理解，更广的视野。',
-    heroText: '为成长型企业提供务实的人力资源咨询。我们帮助您清晰、稳健地应对人才、管理和合规挑战。',
+    heroText: '为进入或运营美国市场的企业提供务实可靠的人力资源顾问支持，帮助组织更清晰、稳健地应对人才、管理和合规挑战。',
     bookConsultation: '预约咨询',
     exploreServices: '了解服务',
     introTitle: '我们服务于企业创始人和管理团队',
@@ -391,7 +391,7 @@ const zh = {
     ],
     highlightsTitle: '专业亮点',
     highlights: [
-      '曾任职于财富500强企业的人力资源领导岗位，包括尼尔森、BP 和耐克',
+      '20余年人力资源与组织管理领导经验，曾在财富世界500强及领先跨国企业（如BP、耐克）担任高级人力资源领导职务。',
       '在雷克萨斯零售体系内拥有实战销售管理经验',
       '在南加州大型心理咨询机构拥有咨询相关实践经验',
       '北京大学心理学硕士',
@@ -451,7 +451,7 @@ const zh = {
       },
       {
         title: '招聘与录用支持',
-        intro: '我们支持企业明确招聘需求，提升招聘、录用沟通与入职衔接的效率。',
+        intro: '我们支持企业明确招聘需求，提升招聘、录用沟通���入职衔接的效率。',
         points: [
           '招聘需求分析、人员编制预算与人力规划',
           '岗位说明书优化与招聘渠道策略',
@@ -590,7 +590,7 @@ const zh = {
         scenarioLabel: '适用场景',
         scenario: '处于成长期的企业，内部人力资源团队完善，需要定期、稳定且深入的持续支持。',
         exampleLabel: '业务示例',
-        example: '基于年度规划，在招聘、用工合规、日常员工关系管理等人力资源维度需要持续支持的团队。',
+        example: '基于年度规���，在招聘、用工合规、日常员工关系管理等人力资源维度需要持续支持的团队。',
         billingLabel: '计费参考',
         billing: '按月或按季度固定服务费，可根据服务频率和范围灵活调整。',
       },
@@ -611,7 +611,7 @@ const zh = {
   contact: {
     title: '联系我们',
     subtitle: '有任何问题、合作想法，或只是想打个招呼？欢迎随时与我们联系。',
-    pageTitle: '联系 Shephine',
+    pageTitle: '联系我们',
     pageSubtitle: '有任何问题、合作想法，或只是想打个招呼？欢迎随时联系 Shephine。',
     emailLabel: '邮箱',
     email: 'info@wholevantage.com',
