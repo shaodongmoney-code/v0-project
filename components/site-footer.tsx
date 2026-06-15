@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import type { Dictionary } from '@/lib/dictionaries'
 import { SubscribeForm } from '@/components/subscribe-form'
+import { FooterLangSwitcher } from '@/components/footer-lang-switcher'
 
 export function SiteFooter({
   dict,
@@ -84,9 +85,10 @@ export function SiteFooter({
           </div>
         </div>
 
-        <p className="mt-2 text-center text-sm text-muted-foreground">
+        <p className="mt-12 text-center text-sm text-muted-foreground">
           {dict.footer.languageNote}
         </p>
+        <FooterLangSwitcher locale={locale} />
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row">
           <p>{dict.footer.rights}</p>

@@ -460,7 +460,7 @@ const zh = {
         ],
       },
       {
-        title: '员工关系与管理支持',
+        title: '员工关系与管理支��',
         intro: '支持企业以务实合规的方式管理日常员工关系、职场沟通、绩效问题、调查及敏感用工事宜。',
         points: [
           '员工投诉、冲突及敏感职场问题处理支持',
@@ -655,10 +655,33 @@ const zh = {
     terms: '服务条款',
   },
 }
+// 西班牙语：部分翻译（仅首页核心字段），其余字段回退到英文（通过展开 en 实现）。
+const es = {
+  ...en,
+  nav: {
+    ...en.nav,
+    home: 'Inicio',
+    about: 'Sobre mí',
+    services: 'Servicios',
+    contact: 'Contacto',
+    languages: 'Idioma',
+  },
+  home: {
+    ...en.home,
+    heroTitle: 'Asesoría de RR.HH. para empresas en EE.UU.',
+    heroText:
+      'Apoyo práctico y confiable en recursos humanos para empresas que ingresan u operan en el mercado estadounidense.',
+  },
+  footer: {
+    ...en.footer,
+    languageNote: 'Español (próximamente)',
+  },
+}
+
 export const dictionaries = {
   en,
   zh,
-  // es: { ... }  // 预留：补全西班牙文翻译后在此添加
+  es,
 }
 
 export function getDictionary(locale: string): Dictionary {
