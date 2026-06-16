@@ -416,7 +416,7 @@ const zh = {
       {
         tag: '同理与尊重',
         title: '同理',
-        text: '在保持专业判断的同时，我们也尊重每个人的处境与感受。我们理解人是组织发展的核心，并以高度的人文关怀和尊重来处理复杂的管理事务。',
+        text: '���保持专业判断的同时，我们也尊重每个人的处境与感受。我们理解人是组织发展的核心，并以高度的人文关怀和尊重来处理复杂的管理事务。',
       },
       {
         tag: '行动与推动',
@@ -655,7 +655,8 @@ const zh = {
     terms: '服务条款',
   },
 }
-// 西班牙语：部分翻译（仅首页核心字段），其余字段回退到英文（通过展开 en 实现）。
+// 西班牙语：完整翻译核心页面字段；深层列表内容（服务条目、流程步骤、收费模型）
+// 暂通过展开 en 回退到英文，待后续补全。
 const es = {
   ...en,
   nav: {
@@ -664,17 +665,161 @@ const es = {
     about: 'Sobre mí',
     services: 'Servicios',
     contact: 'Contacto',
+    blog: 'Blog',
     languages: 'Idioma',
+    aboutItems: {
+      story: 'Mi historia',
+      approach: 'Nuestro enfoque',
+    },
+    servicesItems: {
+      content: 'Contenido del servicio',
+      process: 'Proceso de servicio',
+      fee: 'Tarifas del servicio',
+    },
   },
   home: {
     ...en.home,
     heroTitle: 'Asesoría de RR.HH. para empresas en EE.UU.',
     heroText:
       'Apoyo práctico y confiable en recursos humanos para empresas que ingresan u operan en el mercado estadounidense.',
+    bookConsultation: 'Agendar consulta',
+    exploreServices: 'Ver servicios',
+    introTitle: 'Atendemos a fundadores y equipos directivos',
+    introText:
+      'Ya sea que esté construyendo su infraestructura de RR.HH. en EE.UU. desde cero, resolviendo un problema laboral crítico o buscando asesoría continua, ofrecemos orientación clara, accionable y localizada.',
+    wechatText: 'ESCANEE PARA AGREGAR',
+  },
+  story: {
+    ...en.story,
+    title: 'Sobre WholeVantage Advisory',
+    subtitle:
+      'Conozca el propósito, la trayectoria y los valores que sustentan WholeVantage Advisory',
+    paragraphs: [
+      'WholeVantage Advisory fue creada para apoyar a empresas que se preparan para ingresar al mercado estadounidense o que ya operan en Estados Unidos, mediante servicios de consultoría en RR.HH. prácticos y confiables.',
+      'A través de WholeVantage, integro criterio profesional de RR.HH., una comprensión de la conducta humana y la dinámica laboral con base en psicología, y un acompañamiento práctico para situaciones reales de negocio. Mi objetivo es brindar orientación clara, sólida y accionable.',
+      'Aporto más de veinte años de experiencia directiva en recursos humanos y gestión organizacional, combinada con experiencia práctica en dirección comercial y práctica en consejería psicológica. Con una Maestría en Psicología y tres certificaciones profesionales sénior de RR.HH. en EE.UU., ofrezco una perspectiva multidisciplinaria a través de culturas, geografías y funciones de negocio.',
+      'En mi enfoque, combino una comprensión profunda de las estructuras de gestión y el cumplimiento laboral con la realidad del negocio y la perspectiva organizacional. Me comprometo a ayudar a las empresas a construir bases de gestión sólidas, implementar prácticas operativas eficaces y establecer sistemas de soporte organizacional sólidos, para que puedan mantenerse competitivas en un entorno empresarial complejo.',
+    ],
+    highlightsTitle: 'Aspectos profesionales destacados',
+    highlights: [
+      'Más de 20 años de experiencia de liderazgo en RR.HH. y gestión organizacional, incluyendo roles sénior de liderazgo de RR.HH. en empresas Fortune Global 500 y multinacionales líderes como BP y Nike.',
+      'Experiencia práctica en dirección comercial dentro del sistema minorista de Lexus',
+      'Experiencia práctica relacionada con consejería en una gran organización de consejería en el sur de California',
+      'Maestría en Psicología por la Universidad de Pekín',
+      'Certificaciones profesionales de RR.HH. en EE.UU.: SPHR, GPHR y SHRM-CP',
+      'Experiencia en gestión sénior de RR.HH., gestión global de RR.HH. y capacidades profesionales de práctica de RR.HH.',
+    ],
+  },
+  approach: {
+    ...en.approach,
+    title: 'Nuestro enfoque',
+    subtitle:
+      'El enfoque de WholeVantage se basa en cuatro principios fundamentales. Estos principios reflejan nuestro criterio profesional, la forma en que colaboramos con los clientes y nuestra actitud fundamental hacia las personas y los asuntos organizacionales.',
+    principles: [
+      {
+        tag: 'Integridad y principios',
+        title: 'Integridad',
+        text: 'Ofrecemos un criterio profesional, sólido y confiable en asuntos de cumplimiento, gestión y relaciones laborales. Mantenemos la ética profesional y garantizamos que cada recomendación resista una revisión cuidadosa y su aplicación práctica.',
+      },
+      {
+        tag: 'Perspicacia y comprensión',
+        title: 'Perspicacia',
+        text: 'Miramos más allá del problema en sí y prestamos especial atención al contexto organizacional, las prácticas de gestión, las relaciones laborales y la realidad del negocio detrás de cada situación. Esto nos permite ayudar a los clientes a comprender los asuntos con mayor precisión e identificar soluciones prácticas.',
+      },
+      {
+        tag: 'Empatía y respeto',
+        title: 'Empatía',
+        text: 'Si bien mantenemos el criterio profesional, también respetamos las circunstancias y los sentimientos de las personas. Entendemos que las personas están en el centro del desarrollo organizacional y abordamos los asuntos de gestión complejos con un fuerte sentido de cuidado y respeto humano.',
+      },
+      {
+        tag: 'Acción e impulso',
+        title: 'Energía',
+        text: 'Nos enfocamos en la ejecución y la implementación, no solo en recomendaciones sobre el papel. Con una fuerte orientación a la acción, ayudamos a impulsar el cambio y apoyamos a las empresas para convertir las estrategias de gestión en resultados de negocio visibles y prácticos.',
+      },
+    ],
+  },
+  serviceContent: {
+    ...en.serviceContent,
+    title: 'Servicios',
+    subtitle:
+      'Nuestros servicios pueden adaptarse y combinarse de forma flexible según la etapa de crecimiento de su empresa, sus prioridades clave y sus necesidades prácticas de negocio.',
+  },
+  serviceProcess: {
+    ...en.serviceProcess,
+    title: 'Proceso de servicio',
+    subtitle:
+      'Un proceso de colaboración claro, transparente y flexible que garantiza que cada compromiso se alinee con precisión con sus objetivos de desarrollo de negocio.',
+    ctaTitle: '¿No está seguro de cuál es el primer paso correcto?',
+    ctaText:
+      'Le invitamos a comenzar con una conversación inicial. Según sus necesidades y su situación actual, podemos ayudar a identificar las prioridades clave y determinar el enfoque de colaboración más adecuado.',
+    ctaButton: 'Contáctenos',
+  },
+  serviceFee: {
+    ...en.serviceFee,
+    title: 'Modelos de colaboración y precios',
+    subtitle:
+      'Para satisfacer las diversas necesidades de empresas en diferentes etapas de crecimiento y con distintas prioridades de gestión, ofrecemos modelos de colaboración flexibles que garantizan un uso eficiente de los recursos.',
+    ctaTitle:
+      '¿Necesita ayuda para determinar el modelo de colaboración adecuado para su empresa?',
+    ctaText:
+      'Le invitamos a una conversación inicial. Según las prioridades y el presupuesto de su negocio, podemos recomendar el enfoque de colaboración más adecuado para sus necesidades.',
+    ctaButton: 'Contáctenos',
+  },
+  contact: {
+    ...en.contact,
+    title: 'Contacto',
+    subtitle:
+      '¿Tiene alguna pregunta, idea de colaboración o simplemente quiere saludar? No dude en ponerse en contacto con nosotros.',
+    pageTitle: 'Contáctenos',
+    pageSubtitle:
+      '¿Tiene alguna pregunta, idea de colaboración o simplemente quiere saludar? No dude en escribirnos.',
+    emailLabel: 'Correo electrónico',
+    phoneLabel: 'Teléfono',
+    officeLabel: 'Dirección de la oficina',
+    formTitle: 'Envíenos un mensaje',
+    formSubtitle:
+      'Complete el formulario a continuación y le responderemos lo antes posible.',
+    fields: {
+      name: 'Su nombre',
+      email: 'Su correo electrónico',
+      subject: 'Asunto',
+      message: 'Su mensaje',
+    },
+    submit: 'Enviar mensaje',
+    submitting: 'Enviando...',
+    successTitle: '¡Gracias por su mensaje!',
+    successText:
+      'Hemos recibido su mensaje y le responderemos lo antes posible.',
+    successClose: 'Cerrar',
+    errorText:
+      'Algo salió mal. Inténtelo de nuevo o escríbanos directamente.',
+    configText:
+      'El formulario de contacto aún no está completamente configurado. Por ahora, escríbanos directamente.',
+  },
+  blog: {
+    ...en.blog,
+    title: 'Blog',
+    subtitle:
+      'Ideas y perspectivas sobre gestión de RR.HH., cumplimiento laboral y desarrollo organizacional.',
+    comingSoon: 'Artículos próximamente',
+    comingSoonText:
+      'Estamos preparando artículos prácticos sobre gestión de RR.HH. y el panorama laboral de EE.UU. Vuelva pronto.',
   },
   footer: {
     ...en.footer,
-    languageNote: 'Español (próximamente)',
+    about:
+      'Asesoría práctica de RR.HH. para el mercado estadounidense.',
+    contactTitle: 'Contáctenos',
+    followTitle: 'Síguenos',
+    subscribeTitle: 'Suscríbase a noticias de RR.HH.',
+    emailPlaceholder: 'su correo electrónico',
+    subscribe: 'Suscribirse',
+    subscribeSuccess: '¡Gracias por suscribirse!',
+    languageNote:
+      'Sitio web disponible en inglés, 简体中文 y español. Use el selector de idioma en la parte superior.',
+    rights: '© 2026 WholeVantage Advisory. Todos los derechos reservados.',
+    privacy: 'Política de privacidad',
+    terms: 'Términos del servicio',
   },
 }
 

@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { allLocales, localeNames, locales } from '@/lib/i18n'
 
-// 页脚语言切换器：English | 中文 | Español (próximamente)
+// 页脚语言切换器：English | 中文 | Español
 // 切换时保留当前路径，只替换语言前缀。
 export function FooterLangSwitcher({ locale }: { locale: string }) {
   const pathname = usePathname()
