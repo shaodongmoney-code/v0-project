@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
-import { EsNotice } from '@/components/es-notice'
 import { getDictionary } from '@/lib/dictionaries'
 import { locales } from '@/lib/i18n'
 
@@ -41,7 +40,6 @@ export default async function LocaleLayout({
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader dict={dict} locale={locale} />
-      <EsNotice locale={locale} />
       <main className="flex-1">{children}</main>
       <SiteFooter dict={dict} locale={locale} />
     </div>
