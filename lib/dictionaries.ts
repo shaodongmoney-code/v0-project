@@ -460,7 +460,7 @@ const zh = {
         ],
       },
       {
-        title: '员工关系与管理支��',
+        title: '员工关系与管��支��',
         intro: '支持企业以务实合规的方式管理日常员工关系、职场沟通、绩效问题、调查及敏感用工事宜。',
         points: [
           '员工投诉、冲突及敏感职场问题处理支持',
@@ -742,7 +742,113 @@ const es = {
     ...en.serviceContent,
     title: 'Servicios',
     subtitle:
-      'Nuestros servicios pueden adaptarse y combinarse de forma flexible según la etapa de crecimiento de su empresa, sus prioridades clave y sus necesidades prácticas de negocio.',
+      'Nuestros servicios se adaptan y combinan de forma flexible según la etapa de crecimiento de su empresa, sus prioridades clave y sus necesidades prácticas de negocio.',
+    items: [
+      {
+        title: 'Implementación de Infraestructura de RR.HH. en EE.UU.',
+        intro:
+          'Construya las políticas, documentos, procesos y el marco operativo de RR.HH. fundamentales para operar en EE.UU., creando una base sólida para el crecimiento futuro.',
+        points: [
+          'Desarrollo de manual del empleado y políticas esenciales',
+          'Apoyo con documentos básicos: cartas de oferta, acuerdos de confidencialidad y descripciones de puesto',
+          'Revisión y estructuración de onboarding, evaluación del periodo de prueba, cambios de rol y procesos de desvinculación',
+          'Configuración de expedientes de empleados y formularios de RR.HH. de uso frecuente',
+        ],
+      },
+      {
+        title: 'Cumplimiento Laboral y Prevención de Riesgos',
+        intro:
+          'Ayudamos a identificar y reducir riesgos de cumplimiento laboral, estructurando prácticas de gestión y fortaleciendo decisiones operativas.',
+        points: [
+          'Autoevaluaciones y recomendaciones básicas de cumplimiento federal y estatal: I-9, FLSA',
+          'Clasificación empleado vs. contratista, exento vs. no exento, horas de trabajo, horas extra y compensación',
+          'Acciones disciplinarias, investigaciones laborales y recomendaciones de procesos de separación',
+        ],
+      },
+      {
+        title: 'Reclutamiento y Onboarding',
+        intro:
+          'Atraiga talento adecuado y asegure una integración efectiva en el contexto estadounidense.',
+        points: [
+          'Definición de perfiles y estrategia de atracción',
+          'Proceso de entrevistas estructuradas y verificación',
+          'Plan de onboarding de 30-60-90 días',
+        ],
+      },
+      {
+        title: 'Relaciones Laborales y Comunicación',
+        intro:
+          'Gestione conflictos y mejore la comunicación en equipos multiculturales.',
+        points: [
+          'Mediación y resolución de conflictos',
+          'Políticas de conducta y canales de denuncia',
+          'Comunicación interna efectiva',
+        ],
+      },
+      {
+        title: 'Compensación Total: Remuneración y Beneficios',
+        intro:
+          'Establezca mecanismos competitivos de incentivos y beneficios para atraer, motivar y retener talento clave.',
+        points: [
+          'Estructuras salariales, valoración de puestos, bandas salariales y análisis de mercado',
+          'Gestión de compensación para contratación, promociones y traslados internos',
+          'Diseño de bonos y planes de incentivos integrales',
+          'Beneficios integrales, planes 401(k), PTO y bienestar flexible',
+        ],
+      },
+      {
+        title: 'Gestión del Desempeño y Desarrollo Gerencial',
+        intro:
+          'Fortalezca liderazgo, alinee sistemas de evaluación y mejore la colaboración para impulsar el desarrollo organizacional.',
+        points: [
+          'Diseño e implementación de sistemas de evaluación de desempeño',
+          'Capacitación en liderazgo y habilidades gerenciales esenciales',
+          'Comunicación intercultural y colaboración de equipos globales',
+          'Diseño y facilitación de talleres internos personalizados',
+        ],
+      },
+      {
+        title: 'Desarrollo de Talento y Sucesión',
+        intro:
+          'Apoyamos a identificar, desarrollar y retener talento clave, construyendo un pipeline sostenible para el crecimiento futuro.',
+        points: [
+          'Mapeo de talento y planes de desarrollo individual',
+          'Programas de sucesión para roles críticos',
+          'Mentoring y coaching ejecutivo',
+        ],
+      },
+      {
+        title: 'Cultura Corporativa y Compromiso del Empleado',
+        intro:
+          'Modele una atmósfera organizacional positiva para fortalecer pertenencia y compromiso.',
+        points: [
+          'Refinamiento e implementación de valores corporativos',
+          'Encuestas de clima y planes de acción',
+          'Iniciativas de reconocimiento y bienestar',
+        ],
+      },
+      {
+        title: 'Optimización de Sistemas y Procesos de RR.HH.',
+        intro:
+          'Aproveche herramientas digitales para mejorar la eficiencia operativa de la gestión y optimizar la experiencia de servicio al empleado.',
+        points: [
+          'Recomendaciones para la selección de sistemas de información de RR.HH. y nómina',
+          'Revisión de procesos operativos clave y optimización mediante automatización',
+          'Promoción y aplicación de plataformas de autoservicio para empleados',
+          'Establecimiento y análisis de métricas clave de datos de gestión',
+        ],
+      },
+      {
+        title: 'Asesoría de RR.HH. Continua y Apoyo Estratégico',
+        intro:
+          'Nos alineamos estrechamente con las distintas etapas de crecimiento del negocio para ofrecer recomendaciones estratégicas sobre la estrategia de RR.HH., el desarrollo organizacional (OD) y las prioridades clave de gestión en cada fase.',
+        points: [
+          'Servicios de asesoría de RR.HH. por retainer mensual o por demanda: estructuras de apoyo flexibles adaptadas al ritmo operativo y las necesidades inmediatas de su empresa.',
+          'Soporte de preguntas y respuestas del día a día: asesoría confiable sobre desafíos continuos de RR.HH. y gestión, incluyendo, entre otros, reclutamiento, cumplimiento y relaciones laborales.',
+          'Mantenimiento posterior a la implementación: seguimiento continuo para garantizar que los proyectos implementados se integren sin problemas en las operaciones diarias.',
+        ],
+      },
+    ],
   },
   serviceProcess: {
     ...en.serviceProcess,
