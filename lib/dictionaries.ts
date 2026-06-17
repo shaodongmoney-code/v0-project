@@ -416,7 +416,7 @@ const zh = {
       {
         tag: '同理与尊重',
         title: '同理',
-        text: '���保持专业判断的同时，我们也尊重每个人的处境与感受。我们理解人是组织发展的核心，并以高度的人文关怀和尊重来处理复杂的管理事务。',
+        text: '�����保持专业判断的同时，我们也尊重每个人的处境与感受。我们理解人是组织发展的核心，并以高度的人文关怀和尊重来处理复杂的管理事务。',
       },
       {
         tag: '行动与推动',
@@ -460,7 +460,7 @@ const zh = {
         ],
       },
       {
-        title: '员工关系与管��支��',
+        title: '员工关系与管���支��',
         intro: '支持企业以务实合规的方式管理日常员工关系、职场沟通、绩效问题、调查及敏感用工事宜。',
         points: [
           '员工投诉、冲突及敏感职场问题处理支持',
@@ -719,7 +719,7 @@ const es = {
       {
         tag: 'Integridad y principios',
         title: 'Integridad',
-        text: 'Ofrecemos un criterio profesional, sólido y confiable en asuntos de cumplimiento, gestión y relaciones laborales. Mantenemos la ética profesional y garantizamos que cada recomendación resista una revisión cuidadosa y su aplicación práctica.',
+        text: 'Ofrecemos un criterio profesional, sólido y confiable en asuntos de cumplimiento, gestión y relaciones laborales. Mantenemos la ética profesional y garantizamos que cada recomendación resista una revisi��n cuidadosa y su aplicación práctica.',
       },
       {
         tag: 'Perspicacia y comprensión',
@@ -929,10 +929,112 @@ const es = {
   },
 }
 
+// 德语：迷你站，仅翻译首页 / 服务 / 联系页核心字段，其余通过展开 en 回退英文。
+// 服务条目仅提供 title 与 intro，points 暂沿用英文（页面会渲染 points 列表）。
+const de = {
+  ...en,
+  nav: {
+    ...en.nav,
+    home: 'Startseite',
+    about: 'Über uns',
+    services: 'Leistungen',
+    blog: 'Blog',
+    contact: 'Kontakt',
+    languages: 'Sprache',
+  },
+  home: {
+    ...en.home,
+    heroTitle: 'HR-Beratung für Unternehmen in den USA',
+    heroText:
+      'Praktische und verlässliche Personallösungen für Unternehmen beim Markteintritt oder Betrieb in den Vereinigten Staaten.',
+    bookConsultation: 'Beratung vereinbaren',
+    exploreServices: 'Leistungen ansehen',
+  },
+  serviceContent: {
+    ...en.serviceContent,
+    title: 'Leistungen',
+    subtitle: 'HR-Lösungen für den US-Markteintritt und laufenden Betrieb',
+    items: [
+      {
+        title: 'Aufbau der HR-Infrastruktur in den USA',
+        intro:
+          'Richtlinien, Handbücher und Prozesse für einen soliden Start.',
+        points: en.serviceContent.items[0].points,
+      },
+      {
+        title: 'Compliance & Risikomanagement',
+        intro: 'I-9, FLSA, Einstufung von Mitarbeitern und Auftragnehmern.',
+        points: en.serviceContent.items[1].points,
+      },
+      {
+        title: 'Recruiting & Onboarding',
+        intro: 'Talentgewinnung und strukturierte Einarbeitung.',
+        points: en.serviceContent.items[2].points,
+      },
+      {
+        title: 'Arbeitsbeziehungen',
+        intro: 'Konfliktlösung und Kommunikation in multikulturellen Teams.',
+        points: en.serviceContent.items[3].points,
+      },
+      {
+        title: 'Vergütung & Benefits',
+        intro: 'Gehaltsstrukturen, Bonuspläne, 401(k), PTO.',
+        points: en.serviceContent.items[4].points,
+      },
+      {
+        title: 'Performance Management',
+        intro: 'Zielvereinbarungen, Feedback-Systeme, Führungstraining.',
+        points: en.serviceContent.items[5].points,
+      },
+      {
+        title: 'Talententwicklung & Nachfolge',
+        intro: 'Potenzialanalyse und Nachfolgeplanung.',
+        points: en.serviceContent.items[6].points,
+      },
+      {
+        title: 'Unternehmenskultur & Engagement',
+        intro: 'Werte, Mitarbeiterbindung und Betriebsklima.',
+        points: en.serviceContent.items[7].points,
+      },
+      {
+        title: 'HR-Systeme & Digitalisierung',
+        intro: 'Auswahl und Einführung von HRIS.',
+        points: en.serviceContent.items[8].points,
+      },
+      {
+        title: 'Laufende HR-Beratung',
+        intro: 'Flexible Unterstützung bei täglichen HR-Fragen.',
+        points: en.serviceContent.items[9].points,
+      },
+    ],
+  },
+  contact: {
+    ...en.contact,
+    title: 'Kontaktieren Sie uns',
+    subtitle: 'Haben Sie Fragen zur US-Personalarbeit? Schreiben Sie uns.',
+    pageTitle: 'Kontaktieren Sie uns',
+    pageSubtitle:
+      'Haben Sie Fragen zur US-Personalarbeit? Schreiben Sie uns.',
+    fields: {
+      name: 'Ihr Name',
+      email: 'Ihre E-Mail',
+      subject: 'Betreff',
+      message: 'Ihre Nachricht',
+    },
+    submit: 'Nachricht senden',
+  },
+  footer: {
+    ...en.footer,
+    about: 'Praktische HR-Beratung für den US-Markt',
+    rights: '© 2026 WholeVantage Advisory. Alle Rechte vorbehalten.',
+  },
+}
+
 export const dictionaries = {
   en,
   zh,
   es,
+  de,
 }
 
 export function getDictionary(locale: string): Dictionary {

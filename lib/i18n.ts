@@ -5,10 +5,10 @@
 // ============================================================================
 
 // 已上线启用的语言
-export const locales = ['en', 'zh', 'es'] as const
+export const locales = ['en', 'zh', 'es', 'de'] as const
 
 // 全部计划支持的语言（用于语言切换菜单展示）
-export const allLocales = ['en', 'zh', 'es'] as const
+export const allLocales = ['en', 'zh', 'es', 'de'] as const
 
 export type Locale = (typeof allLocales)[number]
 
@@ -20,4 +20,5 @@ export const localeNames: Record<string, string> = {
   en: 'English',
   zh: '中文',
   es: 'Español',
+  de: 'Deutsch',
 }
