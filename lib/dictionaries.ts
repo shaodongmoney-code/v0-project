@@ -416,7 +416,7 @@ const zh = {
       {
         tag: '同理与尊重',
         title: '同理',
-        text: '�����保持专业判断的同时，我们也尊重每个人的处境与感受。我们理解人是组织发展的核心，并以高度的人文关怀和尊重来处理复杂的管理事务。',
+        text: '�������保持专业判断的同时，我们也尊重每个人的处境与感受。我们理解人是组织发展的核心，并以高度的人文关怀和尊重来处理复杂的管理事务。',
       },
       {
         tag: '行动与推动',
@@ -460,7 +460,7 @@ const zh = {
         ],
       },
       {
-        title: '员工关系与管���支��',
+        title: '员工关系��管���支��',
         intro: '支持企业以务实合规的方式管理日常员工关系、职场沟通、绩效问题、调查及敏感用工事宜。',
         points: [
           '员工投诉、冲突及敏感职场问题处理支持',
@@ -577,7 +577,7 @@ const zh = {
         billing: '根据问题复杂度和范围，按次咨询或年度顾问费计费。',
       },
       {
-        title: '项目制定制���务',
+        title: '项目制定制�����务',
         scenarioLabel: '适用场景',
         scenario: '团队初具规模，专注于在特定时间内构建全面体系和流程的企业。',
         exampleLabel: '业务示例',
@@ -1065,6 +1065,14 @@ const de = {
       message: 'Ihre Nachricht',
     },
     submit: 'Nachricht senden',
+  },
+  blog: {
+    ...en.blog,
+    title: 'Einblicke & US-HR-Wissen',
+    subtitle: 'Praktische Artikel für den Markteintritt in den USA',
+    comingSoon: 'Artikel folgen in Kürze',
+    comingSoonText:
+      'Wir bereiten praxisnahe Artikel zu US-Personalarbeit und Markteintritt vor. Schauen Sie bald wieder vorbei.',
   },
   footer: {
     ...en.footer,
