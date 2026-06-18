@@ -577,7 +577,7 @@ const zh = {
         billing: '根据问题复杂度和范围，按次咨询或年度顾问费计费。',
       },
       {
-        title: '项目制定制服务',
+        title: '项目制定制���务',
         scenarioLabel: '适用场景',
         scenario: '团队初具规模，专注于在特定时间内构建全面体系和流程的企业。',
         exampleLabel: '业务示例',
@@ -949,6 +949,49 @@ const de = {
       'Praktische und verlässliche Personallösungen für Unternehmen beim Markteintritt oder Betrieb in den Vereinigten Staaten.',
     bookConsultation: 'Beratung vereinbaren',
     exploreServices: 'Leistungen ansehen',
+  },
+  story: {
+    ...en.story,
+    title: 'Meine Geschichte',
+    subtitle: 'Von HR-Operations zur strategischen Beratung',
+    paragraphs: [
+      'Mit über 15 Jahren Erfahrung in US-Unternehmen begleite ich Gründer und Expansions-Teams dabei, vom ersten Mitarbeiter an eine rechtskonforme und skalierbare HR-Basis aufzubauen.',
+      'Ich habe Teams von 5 bis über 500 Mitarbeitenden durch Markteintritt, schnelles Wachstum und behördliche Prüfungen geführt – in den Branchen Fertigung, Technologie und Dienstleistungen.',
+      'Mein Ansatz ist immer praxisnah: weniger Theorie, mehr umsetzbare Prozesse, die in den USA funktionieren und gleichzeitig die Kultur des Heimatlandes respektieren.',
+    ],
+    highlightsTitle: 'Warum deutsche Unternehmen uns wählen',
+    highlights: [
+      'Deutschsprachige Ansprechpartnerin mit US-HR-Zertifizierung',
+      'Erfahrung mit GmbH-Tochtergesellschaften und Greenfield-Investitionen',
+      'Feste Pauschalen statt unklarer Stundensätze',
+    ],
+  },
+  approach: {
+    ...en.approach,
+    title: 'Mein Ansatz',
+    subtitle:
+      'Mein Ansatz beruht auf drei Grundprinzipien, die meine Beratung und die Zusammenarbeit mit Kunden prägen.',
+    principles: [
+      {
+        tag: 'Pragmatismus',
+        title: 'Praxis vor Papier',
+        text: 'Vorlagen sind gut – funktionierende Abläufe sind besser.',
+      },
+      {
+        tag: 'Compliance',
+        title: 'Compliance als Vorteil',
+        text: 'I-9, FLSA und staatliche Regeln werden so gestaltet, dass sie Wachstum ermöglichen, nicht bremsen.',
+      },
+      {
+        tag: 'Kultur',
+        title: 'Kulturelle Brücke',
+        text: 'Ich übersetze zwischen deutscher Gründlichkeit und US-amerikanischer Pragmatik.',
+      },
+    ],
+  },
+  serviceProcess: {
+    ...en.serviceProcess,
+    ctaButton: 'Kostenloses Erstgespräch buchen',
   },
   serviceContent: {
     ...en.serviceContent,
