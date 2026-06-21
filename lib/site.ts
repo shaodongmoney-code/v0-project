@@ -13,9 +13,12 @@ export const bcp47: Record<string, string> = {
 }
 
 export function formatDate(date: string, locale: string): string {
+  // 固定 timeZone 为 UTC：日期字符串（如 "2026-06-10"）按 UTC 午夜解析，
+  // 统一时区可保证服务端与客户端格式化结果一致，避免 hydration 不匹配。
   return new Intl.DateTimeFormat(bcp47[locale] ?? 'en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   }).format(new Date(date))
 }
