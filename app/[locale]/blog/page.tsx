@@ -1,10 +1,30 @@
 import type { Metadata } from 'next'
-import { FileText } from 'lucide-react'
 import { PageHeader } from '@/components/page-header'
+import { BlogList, type PostMeta } from '@/components/blog/blog-list'
 import { getDictionary } from '@/lib/dictionaries'
+import { getAllPosts } from '@/lib/blog'
+import { locales } from '@/lib/i18n'
+import { SITE_URL } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'Blog — WholeVantage Advisory',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const dict = getDictionary(locale)
+  const languages: Record<string, string> = {}
+  for (const l of locales) languages[l] = `${SITE_URL}/${l}/blog`
+  languages['x-default'] = `${SITE_URL}/en/blog`
+
+  return {
+    title: `${dict.blog.title} — WholeVantage Advisory`,
+    description: dict.blog.subtitle,
+    alternates: {
+      canonical: `${SITE_URL}/${locale}/blog`,
+      languages,
+    },
+  }
 }
 
 export default async function BlogPage({
@@ -14,24 +34,23 @@ export default async function BlogPage({
 }) {
   const { locale } = await params
   const dict = getDictionary(locale)
-  const b = dict.blog
+
+  // 只把列表所需的可序列化字段传给客户端组件（不含正文）。
+  const posts: PostMeta[] = getAllPosts().map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    excerpt: p.excerpt,
+    category: p.category,
+    date: p.date,
+    author: p.author,
+    readingMinutes: p.readingMinutes,
+  }))
 
   return (
     <>
-      <PageHeader title={b.title} subtitle={b.subtitle} />
-
-      <section className="mx-auto max-w-3xl px-6 pb-24">
-        <div className="flex flex-col items-center rounded-2xl border border-border bg-card px-8 py-16 text-center">
-          <div className="flex size-14 items-center justify-center rounded-full bg-secondary text-primary">
-            <FileText className="size-7" aria-hidden="true" />
-          </div>
-          <h2 className="mt-6 text-2xl font-bold text-primary">
-            {b.comingSoon}
-          </h2>
-          <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">
-            {b.comingSoonText}
-          </p>
-        </div>
+      <PageHeader title={dict.blog.title} subtitle={dict.blog.subtitle} />
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <BlogList posts={posts} locale={locale} t={dict.blog} />
       </section>
     </>
   )

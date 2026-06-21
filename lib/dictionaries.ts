@@ -333,6 +333,31 @@ const en = {
     comingSoon: 'Articles Coming Soon',
     comingSoonText:
       'We are preparing practical articles on HR management and the U.S. employment landscape. Please check back soon.',
+    searchPlaceholder: 'Search articles...',
+    readMore: 'Read more',
+    backToBlog: 'Back to blog',
+    noResults: 'No articles match your search.',
+    categoriesLabel: 'Filter by category',
+    categories: {
+      all: 'All',
+      compliance: 'Compliance',
+      hiring: 'Hiring',
+      expansion: 'Expansion',
+    },
+    minRead: 'min read',
+    writtenBy: 'Written by',
+    relatedTitle: 'Related articles',
+    shareLabel: 'Share',
+    prev: 'Previous',
+    next: 'Next',
+    // 非英文语言会在文章顶部显示该提示；英文留空表示不显示。
+    articleNotice: '',
+    // 文章标题的本地化映射（按 slug）。英文为原标题。
+    articleTitles: {
+      'us-employment-contracts-101': 'U.S. Employment Contracts 101',
+      'i9-compliance-checklist': 'The I-9 Compliance Checklist',
+      'hiring-first-us-employee': 'Hiring Your First U.S. Employee',
+    } as Record<string, string>,
   },
   footer: {
     about:
@@ -583,7 +608,7 @@ const zh = {
         exampleLabel: '业务示例',
         example: '搭建基础管理制度（如员工手册）、建立和优化招聘体系、设计年度绩效评估机制等。',
         billingLabel: '计费参考',
-        billing: '项目定价基于范��、交付成果及预期合作周期；需要时可提供分期付款。',
+        billing: '项目定价基于范��、交付成果及预期合作周期；需要时可提供分��付款。',
       },
       {
         title: '持续管理顾问',
@@ -636,6 +661,7 @@ const zh = {
     configText: '联系表单尚未完全配置，请暂时直接给我们发邮件。',
   },
   blog: {
+    ...en.blog,
     title: '博客',
     subtitle: '关于人力资源管理、用工合规和组织发展的洞察与观点。',
     comingSoon: '文章即将上线',
@@ -1069,10 +1095,32 @@ const de = {
   blog: {
     ...en.blog,
     title: 'Einblicke & US-HR-Wissen',
-    subtitle: 'Praktische Artikel für den Markteintritt in den USA',
+    subtitle: 'Praktische Artikel für den US-Markteintritt',
     comingSoon: 'Artikel folgen in Kürze',
     comingSoonText:
       'Wir bereiten praxisnahe Artikel zu US-Personalarbeit und Markteintritt vor. Schauen Sie bald wieder vorbei.',
+    searchPlaceholder: 'Artikel suchen...',
+    readMore: 'Weiterlesen',
+    backToBlog: 'Zurück zum Blog',
+    noResults: 'Keine Artikel gefunden.',
+    categoriesLabel: 'Nach Kategorie filtern',
+    categories: {
+      all: 'Alle',
+      compliance: 'Compliance',
+      hiring: 'Recruiting',
+      expansion: 'Expansion',
+    },
+    minRead: 'Min. Lesezeit',
+    writtenBy: 'Verfasst von',
+    relatedTitle: 'Verwandte Artikel',
+    shareLabel: 'Teilen',
+    articleNotice:
+      'Dieser Artikel ist auf Englisch. Eine deutsche Zusammenfassung erhalten Sie auf Anfrage.',
+    articleTitles: {
+      'us-employment-contracts-101': 'US-Arbeitsverträge 101',
+      'i9-compliance-checklist': 'I-9 Compliance Checkliste',
+      'hiring-first-us-employee': 'Erste US-Einstellung',
+    } as Record<string, string>,
   },
   footer: {
     ...en.footer,
