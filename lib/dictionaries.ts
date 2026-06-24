@@ -967,6 +967,15 @@ const de = {
     blog: 'Blog',
     contact: 'Kontakt',
     languages: 'Sprache',
+    aboutItems: {
+      story: 'Meine Geschichte',
+      approach: 'Unser Ansatz',
+    },
+    servicesItems: {
+      content: 'Leistungen',
+      process: 'Ablauf',
+      fee: 'Honorar',
+    },
   },
   home: {
     ...en.home,
@@ -1084,6 +1093,7 @@ const de = {
     pageTitle: 'Kontaktieren Sie uns',
     pageSubtitle:
       'Haben Sie Fragen zur US-Personalarbeit? Schreiben Sie uns.',
+    formTitle: 'Nachricht senden',
     fields: {
       name: 'Ihr Name',
       email: 'Ihre E-Mail',
