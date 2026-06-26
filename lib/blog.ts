@@ -40,13 +40,23 @@ function parseFile(fileName: string): BlogPost {
 }
 
 // 读取全部文章，按日期倒序排列（最新在前）。
-export function getAllPosts(): BlogPost[] {
+// 可选 locale：传入 'zh' 仅保留中文文章；传入 'en' 保留英文文章或未标注 lang 的旧文章；
+// 其他/不传则返回全部，保持向后兼容。
+export function getAllPosts(locale?: string): BlogPost[] {
   if (!fs.existsSync(BLOG_DIR)) return []
-  return fs
+  const posts = fs
     .readdirSync(BLOG_DIR)
     .filter((f) => /\.mdx?$/.test(f))
     .map(parseFile)
     .sort((a, b) => +new Date(b.date) - +new Date(a.date))
+
+  if (locale === 'zh') {
+    return posts.filter((p) => p.lang === 'zh')
+  }
+  if (locale === 'en') {
+    return posts.filter((p) => p.lang === 'en' || !p.lang)
+  }
+  return posts
 }
 
 export function getAllSlugs(): string[] {

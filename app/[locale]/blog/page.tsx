@@ -36,7 +36,7 @@ export default async function BlogPage({
   const dict = getDictionary(locale)
 
   // 只把列表所需的可序列化字段传给客户端组件（不含正文）。
-  const posts: PostMeta[] = getAllPosts().map((p) => ({
+  const posts: PostMeta[] = getAllPosts(locale).map((p) => ({
     slug: p.slug,
     title: p.title,
     excerpt: p.excerpt,
