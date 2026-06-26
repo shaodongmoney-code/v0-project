@@ -68,8 +68,13 @@ export function getPostBySlug(slug: string): BlogPost | null {
 }
 
 // 相关文章：优先同分类，其次按最新补足，最多返回 limit 篇。
-export function getRelatedPosts(slug: string, limit = 2): BlogPost[] {
-  const all = getAllPosts()
+// 传入 locale 时仅在同语言文章中查找（复用 getAllPosts 的语言过滤）；不传则保持原行为。
+export function getRelatedPosts(
+  slug: string,
+  locale?: string,
+  limit = 2,
+): BlogPost[] {
+  const all = getAllPosts(locale)
   const current = all.find((p) => p.slug === slug)
   if (!current) return all.slice(0, limit)
   const sameCategory = all.filter(
