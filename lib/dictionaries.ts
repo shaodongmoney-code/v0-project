@@ -595,7 +595,7 @@ const zh = {
       {
         title: '专家咨询与指导',
         scenarioLabel: '适用场景',
-        scenario: '已具备基本运营架构和团队，针对特定挑战寻求专业判断和解决方案的企业。',
+        scenario: '已具备基本运营架构和团队，针���特定挑战寻求专业判断和解决方案的企业。',
         exampleLabel: '业务示例',
         example: '突发组织变动指导、新岗位薪酬设定、特定员工问题排查、详细薪酬管理分析等。',
         billingLabel: '计费参考',
@@ -615,7 +615,7 @@ const zh = {
         scenarioLabel: '适用场景',
         scenario: '处于成长期的企业，内部人力资源团队完善，需要定期、稳定且深入的持续支持。',
         exampleLabel: '业务示例',
-        example: '基于年度规���，在招聘、用工合规、日常员工关系管理等人力资源维度需要持续支持的团队。',
+        example: '基于年度规划，在招聘、用工合规、日常员工关系管理等人力资源维度需要持续支持的团队。',
         billingLabel: '计费参考',
         billing: '按月或按季度固定服务费，可根据服务频率和范围灵活调整。',
       },
@@ -745,7 +745,7 @@ const es = {
       {
         tag: 'Integridad y principios',
         title: 'Integridad',
-        text: 'Ofrecemos un criterio profesional, sólido y confiable en asuntos de cumplimiento, gestión y relaciones laborales. Mantenemos la ética profesional y garantizamos que cada recomendación resista una revisi��n cuidadosa y su aplicación práctica.',
+        text: 'Ofrecemos un criterio profesional, sólido y confiable en asuntos de cumplimiento, gestión y relaciones laborales. Mantenemos la ética profesional y garantizamos que cada recomendación resista una revisión cuidadosa y su aplicación práctica.',
       },
       {
         tag: 'Perspicacia y comprensión',
