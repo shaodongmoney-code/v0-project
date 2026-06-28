@@ -55,7 +55,7 @@ export default async function BlogArticlePage({
   const t = dict.blog
   const base = `/${locale}`
   const title = t.articleTitles[slug] ?? post.title
-  const related = getRelatedPosts(slug, 2)
+  const related = getRelatedPosts(slug, locale)
   const showNotice = locale !== 'en' && t.articleNotice.length > 0
 
   return (

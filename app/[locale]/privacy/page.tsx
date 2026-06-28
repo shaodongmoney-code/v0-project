@@ -1,9 +1,21 @@
 import type { Metadata } from 'next'
 import { PageHeader } from '@/components/page-header'
 import { getDictionary } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy — WholeVantage Advisory',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const dict = getDictionary(locale)
+  return pageMetadata({
+    locale,
+    path: '/privacy',
+    title: `${dict.footer.privacy} — WholeVantage Advisory`,
+    description: 'How we collect, use, and protect your information.',
+  })
 }
 
 export default async function PrivacyPage({

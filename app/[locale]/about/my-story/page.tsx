@@ -4,9 +4,21 @@ import { CheckCircle2 } from 'lucide-react'
 import { CtaSection } from '@/components/cta-section'
 import { PageHeader } from '@/components/page-header'
 import { getDictionary } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'My Story — WholeVantage Advisory',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const dict = getDictionary(locale)
+  return pageMetadata({
+    locale,
+    path: '/about/my-story',
+    title: `${dict.story.title} — WholeVantage Advisory`,
+    description: dict.story.subtitle,
+  })
 }
 
 export default async function MyStoryPage({

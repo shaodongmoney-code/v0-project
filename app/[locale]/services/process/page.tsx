@@ -2,9 +2,21 @@ import type { Metadata } from 'next'
 import { CtaSection } from '@/components/cta-section'
 import { PageHeader } from '@/components/page-header'
 import { getDictionary } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'Service Process — WholeVantage Advisory',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const dict = getDictionary(locale)
+  return pageMetadata({
+    locale,
+    path: '/services/process',
+    title: `${dict.serviceProcess.title} — WholeVantage Advisory`,
+    description: dict.serviceProcess.subtitle,
+  })
 }
 
 export default async function ServiceProcessPage({

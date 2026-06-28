@@ -1,9 +1,21 @@
 import type { Metadata } from 'next'
 import { PageHeader } from '@/components/page-header'
 import { getDictionary } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'Terms of Service — WholeVantage Advisory',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const dict = getDictionary(locale)
+  return pageMetadata({
+    locale,
+    path: '/terms',
+    title: `${dict.footer.terms} — WholeVantage Advisory`,
+    description: 'The terms that govern your use of this website.',
+  })
 }
 
 export default async function TermsPage({

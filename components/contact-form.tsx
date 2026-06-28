@@ -38,6 +38,17 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
   return (
     <>
       <form key={formKey} action={formAction} className="flex flex-col gap-5">
+        {/* 蜜罐字段：对真实用户隐藏，机器人常会自动填写，服务端据此丢弃垃圾提交 */}
+        <div className="hidden" aria-hidden="true">
+          <label htmlFor="company">Company</label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
         <div className="grid gap-5 sm:grid-cols-2">
           <div className="flex flex-col gap-2">
             <Label htmlFor="name">{c.fields.name}</Label>

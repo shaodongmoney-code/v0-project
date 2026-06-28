@@ -595,7 +595,7 @@ const zh = {
       {
         title: '专家咨询与指导',
         scenarioLabel: '适用场景',
-        scenario: '已具备基本运营架构和团队，针对特定挑战寻求专业判断和解决方案的企业。',
+        scenario: '已具备基本运营架构和团队，针���特定挑战寻求专业判断和解决方案的企业。',
         exampleLabel: '业务示例',
         example: '突发组织变动指导、新岗位薪酬设定、特定员工问题排查、详细薪酬管理分析等。',
         billingLabel: '计费参考',
@@ -1147,5 +1147,8 @@ export const dictionaries = {
 }
 
 export function getDictionary(locale: string): Dictionary {
-  return (dictionaries as Record<string, Dictionary>)[locale] ?? en
+  // zh/es/de 以 `...en` 展开 + 字符串覆盖的方式编写，其字面量被推断为更宽的 string/string[]，
+  // 与 en 推断出的只读字面量元组不完全可比，故经 unknown 桥接做类型断言。
+  // 这不影响页面消费端的类型：返回值仍为完整的 Dictionary，autocomplete 与字段校验保持不变。
+  return (dictionaries as unknown as Record<string, Dictionary>)[locale] ?? en
 }
