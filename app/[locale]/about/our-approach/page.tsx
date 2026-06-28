@@ -2,9 +2,21 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { PageHeader } from '@/components/page-header'
 import { getDictionary } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'Our Approach — WholeVantage Advisory',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const dict = getDictionary(locale)
+  return pageMetadata({
+    locale,
+    path: '/about/our-approach',
+    title: `${dict.approach.title} — WholeVantage Advisory`,
+    description: dict.approach.subtitle,
+  })
 }
 
 export default async function OurApproachPage({

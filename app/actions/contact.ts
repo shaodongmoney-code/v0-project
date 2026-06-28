@@ -16,6 +16,12 @@ export async function sendContactMessage(
   const email = String(formData.get('email') ?? '').trim()
   const subject = String(formData.get('subject') ?? '').trim()
   const message = String(formData.get('message') ?? '').trim()
+  // 蜜罐字段：正常用户看不到、不会填写；被填写则判定为机器人，假装成功直接丢弃。
+  const honeypot = String(formData.get('company') ?? '').trim()
+
+  if (honeypot) {
+    return { ok: true }
+  }
 
   // 基本校验
   if (!name || !email || !message) {
@@ -27,10 +33,8 @@ export async function sendContactMessage(
   }
 
   const apiKey = process.env.RESEND_API_KEY
-  // 收件邮箱：留言统一发到这个 Gmail（已验证可正常收信）。
-  // 你可在 Gmail 设置里自动转发到 info@wholevantage.com。
-  // 将来域名在 Resend 验证后，可改回 process.env.CONTACT_TO_EMAIL。
-  const to = 'shaodongmoney@gmail.com'
+  // 收件邮箱：优先用环境变量 CONTACT_TO_EMAIL，未配置时回退到已验证的 Gmail。
+  const to = process.env.CONTACT_TO_EMAIL || 'shaodongmoney@gmail.com'
   if (!apiKey) {
     return { ok: false, error: 'config' }
   }
@@ -58,12 +62,10 @@ export async function sendContactMessage(
     })
 
     if (error) {
-      console.log('[v0] Resend send error:', error)
       return { ok: false, error: 'send' }
     }
     return { ok: true }
-  } catch (err) {
-    console.log('[v0] Contact action exception:', err)
+  } catch {
     return { ok: false, error: 'send' }
   }
 }

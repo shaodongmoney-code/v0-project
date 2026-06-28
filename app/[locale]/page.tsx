@@ -1,8 +1,25 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
+import { pageMetadata } from '@/lib/site'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const dict = getDictionary(locale)
+  return pageMetadata({
+    locale,
+    path: '',
+    title: `${dict.home.heroTitle} — WholeVantage Advisory`,
+    description: dict.home.heroText,
+  })
+}
 
 export default async function HomePage({
   params,
