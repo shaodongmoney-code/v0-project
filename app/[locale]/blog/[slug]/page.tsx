@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, CalendarDays, Clock, Info } from 'lucide-react'
+import { ArrowLeft, CalendarDays, Clock } from 'lucide-react'
 import { ArticleBody } from '@/components/blog/article-body'
 import { ShareButtons } from '@/components/blog/share-buttons'
 import { getDictionary } from '@/lib/dictionaries'
@@ -25,8 +25,7 @@ export async function generateMetadata({
   const { locale, slug } = await params
   const post = getPostBySlug(slug)
   if (!post) return {}
-  const dict = getDictionary(locale)
-  const title = dict.blog.articleTitles[slug] ?? post.title
+  const title = post.title
 
   const languages: Record<string, string> = {}
   for (const l of locales) languages[l] = `${SITE_URL}/${l}/blog/${slug}`
@@ -54,9 +53,8 @@ export default async function BlogArticlePage({
   const dict = getDictionary(locale)
   const t = dict.blog
   const base = `/${locale}`
-  const title = t.articleTitles[slug] ?? post.title
-  const related = getRelatedPosts(slug, locale)
-  const showNotice = locale !== 'en' && t.articleNotice.length > 0
+  const title = post.title
+  const related = getRelatedPosts(slug)
 
   return (
     <article className="mx-auto max-w-3xl px-6 pb-24 pt-10">
@@ -85,7 +83,7 @@ export default async function BlogArticlePage({
       <header className="flex flex-col gap-4">
         <div className="flex items-center gap-3 text-xs text-muted-foreground">
           <span className="rounded-full bg-secondary px-3 py-1 font-semibold text-secondary-foreground">
-            {t.categories[post.category]}
+            {post.lang === 'zh' ? '中文' : 'EN'}
           </span>
           <span className="inline-flex items-center gap-1">
             <CalendarDays className="size-3.5" aria-hidden="true" />
@@ -111,14 +109,6 @@ export default async function BlogArticlePage({
         </div>
       </header>
 
-      {/* 非英文语言提示横幅 */}
-      {showNotice && (
-        <div className="mt-6 flex items-start gap-3 rounded-xl border border-border bg-secondary/60 px-4 py-3 text-sm text-foreground/80">
-          <Info className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
-          <p>{t.articleNotice}</p>
-        </div>
-      )}
-
       {/* 正文 */}
       <div className="mt-8">
         <ArticleBody content={post.content} />
@@ -141,10 +131,10 @@ export default async function BlogArticlePage({
                 className="flex flex-col rounded-2xl border border-border bg-card p-5 transition-colors hover:border-accent"
               >
                 <span className="text-xs font-semibold text-accent">
-                  {t.categories[r.category]}
+                  {r.lang === 'zh' ? '中文' : 'EN'}
                 </span>
                 <span className="mt-2 text-balance font-bold leading-snug text-primary">
-                  {t.articleTitles[r.slug] ?? r.title}
+                  {r.title}
                 </span>
                 <span className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {r.excerpt}

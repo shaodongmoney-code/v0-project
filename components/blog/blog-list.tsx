@@ -11,14 +11,27 @@ export type PostMeta = {
   slug: string
   title: string
   excerpt: string
-  category: 'compliance' | 'hiring' | 'expansion'
+  lang: string
   date: string
   author: string
   readingMinutes: number
 }
 
 const POSTS_PER_PAGE = 6
-const CATEGORY_KEYS = ['all', 'compliance', 'hiring', 'expansion'] as const
+
+// 语言筛选项：按任务要求固定为 All / 中文 / English。
+const LANG_FILTERS = [
+  { key: 'all', label: 'All' },
+  { key: 'zh', label: '中文' },
+  { key: 'en', label: 'English' },
+] as const
+
+type LangFilter = (typeof LANG_FILTERS)[number]['key']
+
+// 文章卡片上的语言标签。
+function langTag(lang: string): string {
+  return lang === 'zh' ? '中文' : 'EN'
+}
 
 export function BlogList({
   posts,
@@ -30,24 +43,22 @@ export function BlogList({
   t: Dictionary['blog']
 }) {
   const [query, setQuery] = useState('')
-  const [category, setCategory] = useState<(typeof CATEGORY_KEYS)[number]>('all')
+  const [lang, setLang] = useState<LangFilter>('all')
   const [page, setPage] = useState(1)
 
   const base = `/${locale}`
-  const localizedTitle = (p: PostMeta) => t.articleTitles[p.slug] ?? p.title
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     return posts.filter((p) => {
-      const matchesCategory = category === 'all' || p.category === category
+      const matchesLang = lang === 'all' || p.lang === lang
       const matchesQuery =
         q === '' ||
-        localizedTitle(p).toLowerCase().includes(q) ||
+        p.title.toLowerCase().includes(q) ||
         p.excerpt.toLowerCase().includes(q)
-      return matchesCategory && matchesQuery
+      return matchesLang && matchesQuery
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [posts, query, category])
+  }, [posts, query, lang])
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / POSTS_PER_PAGE))
   const currentPage = Math.min(page, totalPages)
@@ -64,7 +75,7 @@ export function BlogList({
 
   return (
     <div className="flex flex-col gap-8">
-      {/* 搜索 + 分类筛选 */}
+      {/* 搜索 + 语言筛选 */}
       <div className="flex flex-col gap-4">
         <div className="relative">
           <Search
@@ -81,24 +92,20 @@ export function BlogList({
           />
         </div>
 
-        <div
-          className="flex flex-wrap gap-2"
-          role="group"
-          aria-label={t.categoriesLabel}
-        >
-          {CATEGORY_KEYS.map((key) => (
+        <div className="flex flex-wrap gap-2" role="group" aria-label="Language">
+          {LANG_FILTERS.map((f) => (
             <button
-              key={key}
-              onClick={() => onFilterChange(() => setCategory(key))}
-              aria-pressed={category === key}
+              key={f.key}
+              onClick={() => onFilterChange(() => setLang(f.key))}
+              aria-pressed={lang === f.key}
               className={cn(
                 'rounded-full border px-4 py-1.5 text-sm font-medium transition-colors',
-                category === key
+                lang === f.key
                   ? 'border-accent bg-accent text-accent-foreground'
                   : 'border-border bg-card text-foreground/80 hover:border-accent hover:text-accent',
               )}
             >
-              {t.categories[key]}
+              {f.label}
             </button>
           ))}
         </div>
@@ -118,7 +125,7 @@ export function BlogList({
             >
               <div className="flex items-center gap-3 text-xs text-muted-foreground">
                 <span className="rounded-full bg-secondary px-3 py-1 font-semibold text-secondary-foreground">
-                  {t.categories[p.category]}
+                  {langTag(p.lang)}
                 </span>
                 <span>
                   {p.readingMinutes} {t.minRead}
@@ -129,7 +136,7 @@ export function BlogList({
                   href={`${base}/blog/${p.slug}`}
                   className="outline-none after:absolute hover:underline"
                 >
-                  {localizedTitle(p)}
+                  {p.title}
                 </Link>
               </h2>
               <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-muted-foreground">
