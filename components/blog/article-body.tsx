@@ -58,6 +58,24 @@ export function ArticleBody({ content }: { content: string }) {
               {children}
             </code>
           ),
+          table: ({ children }) => (
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">{children}</table>
+            </div>
+          ),
+          thead: ({ children }) => (
+            <thead className="bg-secondary/60">{children}</thead>
+          ),
+          th: ({ children }) => (
+            <th className="border border-border px-3 py-2 text-left font-semibold text-primary">
+              {children}
+            </th>
+          ),
+          td: ({ children }) => (
+            <td className="border border-border px-3 py-2 align-top text-foreground/90">
+              {children}
+            </td>
+          ),
           hr: () => <hr className="border-border" />,
         }}
       >

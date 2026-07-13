@@ -11,9 +11,12 @@ export type BlogFrontmatter = {
   title: string
   date: string
   excerpt: string
-  category: BlogCategory
   author: string
   lang: string
+  // 分类为可选：新版文章不再使用分类体系（列表改为按语言筛选）。
+  category?: BlogCategory
+  subtitle?: string
+  tags?: string[]
 }
 
 export type BlogPost = BlogFrontmatter & {
@@ -67,21 +70,16 @@ export function getPostBySlug(slug: string): BlogPost | null {
   return getAllPosts().find((p) => p.slug === slug) ?? null
 }
 
-// 相关文章：优先同分类，其次按最新补足，最多返回 limit 篇。
-// 传入 locale 时仅在同语言文章中查找（复用 getAllPosts 的语言过滤）；不传则保持原行为。
-export function getRelatedPosts(
-  slug: string,
-  locale?: string,
-  limit = 2,
-): BlogPost[] {
-  const all = getAllPosts(locale)
+// 相关文章：优先同语言，其次按最新补足，最多返回 limit 篇。
+export function getRelatedPosts(slug: string, limit = 2): BlogPost[] {
+  const all = getAllPosts()
   const current = all.find((p) => p.slug === slug)
   if (!current) return all.slice(0, limit)
-  const sameCategory = all.filter(
-    (p) => p.slug !== slug && p.category === current.category,
+  const sameLang = all.filter(
+    (p) => p.slug !== slug && p.lang === current.lang,
   )
   const others = all.filter(
-    (p) => p.slug !== slug && p.category !== current.category,
+    (p) => p.slug !== slug && p.lang !== current.lang,
   )
-  return [...sameCategory, ...others].slice(0, limit)
+  return [...sameLang, ...others].slice(0, limit)
 }

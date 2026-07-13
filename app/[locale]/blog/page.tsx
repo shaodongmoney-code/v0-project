@@ -35,12 +35,13 @@ export default async function BlogPage({
   const { locale } = await params
   const dict = getDictionary(locale)
 
+  // 展示全部文章（不按页面语言过滤），语言切换交给客户端筛选器。
   // 只把列表所需的可序列化字段传给客户端组件（不含正文）。
-  const posts: PostMeta[] = getAllPosts(locale).map((p) => ({
+  const posts: PostMeta[] = getAllPosts().map((p) => ({
     slug: p.slug,
     title: p.title,
     excerpt: p.excerpt,
-    category: p.category,
+    lang: p.lang,
     date: p.date,
     author: p.author,
     readingMinutes: p.readingMinutes,

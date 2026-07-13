@@ -3,20 +3,24 @@
 import { useState } from 'react'
 import { Check, Link2, Mail, Share2 } from 'lucide-react'
 
-// 文章分享按钮：复制链接、LinkedIn、邮件。客户端组件，使用 window/navigator。
+// 文章分享按钮：复制链接、LinkedIn、邮件。客户端组件。
+// url 由服务端传入（规范绝对地址），避免依赖 window.location 造成 hydration 不匹配，
+// 同时保证在无 JS 时分享链接依然可用。
 export function ShareButtons({
+  url,
   title,
   label,
 }: {
+  url: string
   title: string
   label: string
 }) {
   const [copied, setCopied] = useState(false)
 
   async function copyLink() {
-    if (typeof window === 'undefined') return
+    if (typeof navigator === 'undefined') return
     try {
-      await navigator.clipboard.writeText(window.location.href)
+      await navigator.clipboard.writeText(url)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
@@ -24,7 +28,6 @@ export function ShareButtons({
     }
   }
 
-  const url = typeof window !== 'undefined' ? window.location.href : ''
   const linkedIn = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`
   const mailto = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`
 
