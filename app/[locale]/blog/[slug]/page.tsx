@@ -116,7 +116,11 @@ export default async function BlogArticlePage({
 
       {/* 分享 */}
       <div className="mt-10 border-t border-border pt-6">
-        <ShareButtons title={title} label={t.shareLabel} />
+        <ShareButtons
+          url={`${SITE_URL}/${locale}/blog/${slug}`}
+          title={title}
+          label={t.shareLabel}
+        />
       </div>
 
       {/* 相关文章 */}
