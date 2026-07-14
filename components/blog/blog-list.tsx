@@ -43,7 +43,11 @@ export function BlogList({
   t: Dictionary['blog']
 }) {
   const [query, setQuery] = useState('')
-  const [lang, setLang] = useState<LangFilter>('all')
+  // 默认筛选跟随当前路由语言：/zh → 中文，/en → English，其余 → 全部。
+  // All 按钮保留，用户仍可手动点回查看全部文章。
+  const initialLang: LangFilter =
+    locale === 'zh' ? 'zh' : locale === 'en' ? 'en' : 'all'
+  const [lang, setLang] = useState<LangFilter>(initialLang)
   const [page, setPage] = useState(1)
 
   const base = `/${locale}`
